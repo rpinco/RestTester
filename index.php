@@ -130,7 +130,7 @@
 <input type="text" class="form-control" id="URL" placeholder="url base" name="URL"/>
 
 <div class="input-group-btn">
- <select class="dropdown-toggle btn btn-primary " name="tipoTransaccion">
+ <select class="dropdown-toggle btn btn-primary " name="tipoTransaccion" id="tipoTransaccion">
         <option value="POST" name="post">POST</option>
         <option value="put" name="put">PUT</option>
         <option value="GET" name ="get">GET</option>
@@ -175,7 +175,7 @@
 
 <div class="input-group input-group-sm imputadjust">
 <span class="input-group-addon ">Username</span>
-<input class="form-control" type="text" id="customerId" placeholder="customerId" name="customerId">
+<input class="form-control" type="text" id="username" placeholder="username" name="username">
 </div>
 
 <div class="input-group input-group-sm imputadjust">
@@ -343,6 +343,7 @@ function validate(){
   
   var customerCRMId, authkey, name, password, username, companyId, clientType, customerId,  disabled ,  email, saleId ,  sponsorId ,expirationDate,  billingCycleId,  hidden, lastlogin,  phone = "";
 
+  var url = $('#URL').val();
   var customerCRMId = $('#customerCRMId').val();
   var authkey = $('#authkey').val();
   var name = $('#name').val();
@@ -362,12 +363,14 @@ function validate(){
   var changePassword = $('#changePassword').val();
   var lastlogin = $('#lastlogin').val();
   var phone = $('#phone').val();
+  var tipoTransaccion = $('#tipoTransaccion').val();
      
 
    $.ajax({
         url: "get_test.php",
 	type: "POST",
         data: {
+            url: url,
 		    name: name,
  	        customerCRMId: customerCRMId,
  		    authkey: authkey,
@@ -387,6 +390,7 @@ function validate(){
 	        changePassword: changePassword,
 	        lastlogin: lastlogin,
 	        phone: phone,
+            tipoTransaccion: tipoTransaccion
 	        
         },
 	success: function(data){
