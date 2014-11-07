@@ -97,10 +97,10 @@
                 
 				<div class="tab-content">
                 
-<!-------------------------------------- PANEL 1 --------------------------------------->                 
+
 					<div class="tab-pane active" id="panel-000001">
                     
-<!-------------------------------------- BASE URL ---------------------------------------> 
+
 <form id="elform" method="POST" action="get_test.php" enctype="multipart/form-data" class="form-horizontal"> 
                     
 <div class="input-group input-group-sm baseurl">
@@ -115,11 +115,12 @@
  </select>
 </div>
 </div>
-<!-------------------------------------- BASE URL FIN ---------------------------------------> 
+<!-- ------------------------------------ BASE URL FIN ------------------------------------- --> 
 
 		<div class="col-md-4 column imputadjust">
         
-<!--------------------------------------COLUMNA 1--------------------------------------->      
+
+
 <div class="input-group input-group-sm has-error">
 <span class="input-group-addon">Authkey</span>
 <input class="form-control has-error" type="text" id="authkey" placeholder="authkey" name="authkey" value="authkey">
@@ -168,7 +169,7 @@
 
 </div>
 
-<!-------------------------------------- FIN COLUMNA 1 --------------------------------------->         
+
         
         
 		<div class="col-md-4 column">
@@ -236,7 +237,7 @@
               
                     
                     
-<!-------------------------------------- PANEL 1 FIN --------------------------------------->    
+
                  
 					<div class="tab-pane" id="panel-000002">
 						<p>
@@ -291,15 +292,32 @@
 
 <script type="text/javascript">
  
+function validate(){
+    
+     var customerCRMId = $('#customerCRMId').val();
+     var authkey = $('#authkey').val();
+     var username = $('#username').val();
+     var password = $('#password').val();
+     var companyId = $('#companyId').val();
+     var clientType = $('#clientType').val();
+    
+    if(customerCRMId == "" || authkey == ""  || companyId == ""){
+	   $('#resultado').html("Falta completar campos requeridos");
+ 	  return false;
+	}
 
+	return true;
+}
  
  function mostrarResultado(){
   
+  var customerCRMId, authkey, name, password, username, companyId, clientType, customerId,  disabled ,  email, saleId ,  sponsorId ,  billingCycleId,  hidden, lastlogin,  phone = "";
 
   var customerCRMId = $('#customerCRMId').val();
   var authkey = $('#authkey').val();
-  var companyId = $('#companyId').val();
+  var name = $('#name').val();
   var password = $('#password').val();
+  var username = $('#username').val();
   var companyId = $('#companyId').val();
   var clientType = $('#clientType').val();
   var customerId = $('#customerId').val();
@@ -316,32 +334,18 @@
   var phone = $('#phone').val();
      
 
-  alert(name);
-
    $.ajax({
         url: "get_test.php",
 	type: "POST",
         data: {
-		name: name,
-        customerCRMId: customerCRMId,
-		authkey: authkey,
-		companyId: companyId,
-        password: password,
-        companyId: companyId,
-        clientType: clientType,
-        username: username,
-        customerId: customerId,
-        disabled: disabled,
-        email: email,
-        saleId: saleId,
-        sponsorId: sponsorId,
-        expirationDate: expirationDate,
-        billingCycleId: billingCycleId,
-        hidden: hidden,
-        lastBillingDate: lastBillingDate,
-        changePassword: changePassword,
-        lastlogin: lastlogin,
-        phone: phone,
+		    name: name,
+ 	        customerCRMId: customerCRMId,
+ 		    authkey: authkey,
+	        password: password,
+	        companyId: companyId,
+	        clientType: clientType,
+	        username: username
+	        
         },
 	success: function(data){
 		$('#resultado').html(data);
