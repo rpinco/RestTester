@@ -290,13 +290,30 @@
 
 <script type="text/javascript">
  
+
+ 
  function mostrarResultado(){
   
 
   var customerId = $('#customerCRMId').val();
   var authkey = $('#authkey').val();
   var companyId = $('#companyId').val();
-  var name = $('#name').val();
+  var password = $('#password').val();
+  var companyId = $('#companyId').val();
+  var clientType = $('#clientType').val();
+  var customerId = $('#customerId').val();
+  var disabled = $('#disabled').val();
+  var email = $('#email').val();
+  var saleId = $('#saleId').val();
+  var sponsorId = $('#sponsorId').val();
+  var expiratiionDate = $('#expiratiionDate').val();
+  var billingCycleId = $('#billingCycleId').val();
+  var hidden = $('#hidden').val();
+  var lastBillingDate = $('#lastBillingDate').val();
+  var changePassword = $('#changePassword').val();
+  var lastlogin = $('#lastlogin').val();
+  var phone = $('#phone').val();
+     
 
   alert(name);
 
