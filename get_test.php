@@ -4,7 +4,7 @@ var_dump($_REQUEST);die;
 $service_url = $_REQUEST['url'];
 //var_dump($service_url);die;
 
-$data = array("authkey" => $_REQUEST['authkey'], "companyId" => $_REQUEST['companyId'], 'customerId'=> $_REQUEST['customerId']);
+$data = array("authkey" => $_REQUEST['authkey'], "customerCRMId" => $_REQUEST['customerCRMId'], 'name'=> $_REQUEST['name'], "password" => $_REQUEST['password'], "companyId" => $_REQUEST['companyId'], "clientType" => $_REQUEST['clientType'], "username" => $_REQUEST['username'], "customerId" => $_REQUEST['customerId'], "disabled" => $_REQUEST['disabled'], "email" => $_REQUEST['email'], "saleId" => $_REQUEST['saleId'], "sponsorId" => $_REQUEST['sponsorId'], "expirationDate" => $_REQUEST['expirationDate'], "billingCycleId" => $_REQUEST['billingCycleId'], "hidden" => $_REQUEST['hidden'], "lastBillingDate" => $_REQUEST['lastBillingDate'], "changePassword" => $_REQUEST['changePassword'], "lastlogin" => $_REQUEST['lastlogin'], "phone" => $_REQUEST['phone']);
 // $data_string = json_encode($data);
 //var_dump($data);die;
 $data_string = http_build_query($data);
