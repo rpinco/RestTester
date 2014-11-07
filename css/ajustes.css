@@ -1,0 +1,48 @@
+.imputadjust {
+	padding-left:0px;
+	margin-top:20px;
+	max-width: 95%;
+}
+
+.imputadjust {
+	padding-left:0px;
+	margin-top:20px;
+
+}
+
+.contenedor {
+	width:100%;
+	padding: 20px 20px 20px 20px;
+	margin:auto;
+}
+
+.baseurl {
+    margin-top: 30px;
+	max-width: 66%;
+}
+.labelsize {
+	width:70px;
+}
+.botonEnviar {
+	margin-top:50px;
+	
+	width:95%;
+}
+.bs-callout {
+	padding:20px;
+	margin: 20px 0;
+	border:1px solid #eee;
+	border-left-width: 5px;
+	border-radius: 3px;
+}
+.bs-callout-warning {
+	border-left-color: #f0ad4e;
+
+}
+.bs-callout-alert {
+	border-left-color: #d9534f;
+}
+.iframesize{
+	width: 100%;
+	height: 800px;
+}

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>PI.gu</title>
+  <title>Master Race Team</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="">
@@ -13,56 +13,9 @@
 	<!--append ‘#!watch’ to the browser URL, then refresh the page. -->
 	
 	<link href="css/bootstrap.min.css" rel="stylesheet">
-    <style>
-	
+	<link href="css/ajustes.css" rel="stylesheet">
 
 
-.imputadjust {
-	padding-left:0px;
-	margin-top:20px;
-	max-width: 95%;
-}
-
-.imputadjust {
-	padding-left:0px;
-	margin-top:20px;
-
-}
-
-.contenedor {
-	width:100%;
-	padding: 20px 20px 20px 20px;
-	margin:auto;
-}
-
-.baseurl {
-    margin-top: 30px;
-	max-width: 66%;
-}
-.labelsize {
-	width:70px;
-}
-.botonEnviar {
-	margin-top:50px;
-	
-	width:95%;
-}
-.bs-callout {
-	padding:20px;
-	margin: 20px 0;
-	border:1px solid #eee;
-	border-left-width: 5px;
-	border-radius: 3px;
-}
-.bs-callout-warning {
-	border-left-color: #f0ad4e;
-
-
-}
-.bs-callout-alert {
-	border-left-color: #d9534f;
-}
-    </style>
 	
     
 
@@ -77,10 +30,10 @@
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72-precomposed.png">
   <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-57-precomposed.png">
   <link rel="shortcut icon" href="img/favicon.png">
-  
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/scripts.js"></script>
+	<script type="text/javascript" src="js/masterjs.js"></script>
 </head>
 
 <body>
@@ -122,148 +75,9 @@
 
 					<div class="tab-pane active" id="panel-000001">
                     
+						<iframe src="iadd.php" class="iframesize" frameborder="0" id="iadd"></iframe>
 
-<form id="elform" method="POST" action="get_test.php" enctype="multipart/form-data" class="form-horizontal"> 
-                    
-<div class="input-group input-group-sm baseurl">
-<span class="input-group-addon labelimput">Base URL</span>
-<input type="text" class="form-control" id="URL" placeholder="url base" name="URL"/>
-
-<div class="input-group-btn">
- <select class="dropdown-toggle btn btn-primary " name="tipoTransaccion" id="tipoTransaccion">
-        <option value="POST" name="post">POST</option>
-        <option value="put" name="put">PUT</option>
-        <option value="GET" name ="get">GET</option>
- </select>
-</div>
-</div>
-
-
-		<div class="col-md-3 column divadjust">
-        
-
-
-<div class="input-group input-group-sm has-error imputadjust">
-<span class="input-group-addon">Authkey</span>
-<input class="form-control has-error" type="text" id="authkey" placeholder="authkey" name="authkey">
-</div>
-
-<div class="input-group input-group-sm imputadjust has-error">
-<span class="input-group-addon ">CustomerCRMId</span>
-<input class="form-control" type="text" id="customerCRMId" placeholder="customerCRMId" name="customerCRMId">
-</div>
-
-<div class="input-group input-group-sm imputadjust has-error">
-<span class="input-group-addon ">name</span>
-<input class="form-control" type="text" id="name" placeholder="name" name="name">
-</div>
-
-<div class="input-group input-group-sm imputadjust has-error">
-<span class="input-group-addon ">Password</span>
-<input class="form-control" type="text" id="password" placeholder="password" name="password">
-</div>
-
-<div class="input-group input-group-sm imputadjust has-error">
-<span class="input-group-addon ">CompanyId</span>
-<input class="form-control" id="companyId" placeholder="companyId" name="companyId">
-</div>
-
-<div class="input-group input-group-sm imputadjust has-error">
-<span class="input-group-addon ">ClientType</span>
-<input class="form-control" type="text" id="clientType" placeholder="clientType" name="clientType">
-</div>
-
-<div class="input-group input-group-sm imputadjust">
-<span class="input-group-addon ">Username</span>
-<input class="form-control" type="text" id="username" placeholder="username" name="username">
-</div>
-
-<div class="input-group input-group-sm imputadjust">
-<span class="input-group-addon ">Disabled</span>
-<input class="form-control" type="text" id="disabled" placeholder="disabled" name="disabled">
-</div>
-
-
-<div class="input-group input-group-sm imputadjust">
-<span class="input-group-addon ">Email</span>
-<input class="form-control" type="text" id="email" placeholder="email" name="email">
-</div>
-
-</div>
-
-
-        
-        
-		<div class="col-md-3 column">
-        
-<div class="input-group input-group-sm imputadjust">
-<span class="input-group-addon ">SalieId</span>
-<input class="form-control" id="saleId" placeholder="saleId" name="saleId">
-</div>
-
-<div class="input-group input-group-sm imputadjust">
-<span class="input-group-addon ">SponsorId</span>
-<input class="form-control" id="sponsorId" placeholder="sponsorId" name="sponsorId">
-</div> 
-
-<div class="input-group input-group-sm imputadjust">
-<span class="input-group-addon ">ExpirationDate</span>
-<input class="form-control" id="expirationDate" placeholder="expirationDate" name="expirationDate">
-</div>  
-
-<div class="input-group input-group-sm imputadjust">
-<span class="input-group-addon ">BillingCycleId</span>
-<input class="form-control" id="billingCycleId" placeholder="billingCycleId" name="billingCycleId">
-</div>  
-
-<div class="input-group input-group-sm imputadjust">
-<span class="input-group-addon ">Hidden</span>
-<input class="form-control" id="hidden" placeholder="hidden" name="hidden">
-</div>  
-
-<div class="input-group input-group-sm imputadjust">
-<span class="input-group-addon ">LastBillingDate</span>
-<input class="form-control" id="lastBillingDate" placeholder="lastBillingDate" name="lastBillingDate">
-</div>  
-
-<div class="input-group input-group-sm imputadjust">
-<span class="input-group-addon ">ChangePassword</span>
-<input class="form-control" id="changePassword" placeholder="changePassword" name="changePassword">
-</div>  
-
-<div class="input-group input-group-sm imputadjust">
-<span class="input-group-addon ">Lastlogin</span>
-<input class="form-control" type="text" id="lastlogin" placeholder="lastlogin" name="lastlogin">
-</div>  
-
-<div class="input-group input-group-sm imputadjust">
-<span class="input-group-addon ">Phone</span>
-<input class="form-control" type="text" id="phone" placeholder="phone" name="phone">
-</div>     
-
-    <input type="button" class="btn btn-success botonEnviar" id="Enviar" value="Enviar" onclick="if(validate()){mostrarResultado()}"/>
-		</div>
-        
-        
-        
-				<div class="col-md-6 column">
-         <h3> RESPUESTA </h3>
-        		<div id="resultado" class="bs-callout bs-callout-warning">
-        			1. Colocar la url base<br>
-        			2. Elegir el metodo<br>
-        			3. Completar todos los campos<br>
-        			4. Enviar<br>
-
-        		</div>
-        
-        
-
-        </div>
-
-   
-  
-</form>
-</div>
+					</div>
               
                     
                     
@@ -318,88 +132,6 @@
 </div>
 
 
-
-
-<script type="text/javascript">
- 
-function validate(){
-    
-     var authkey = $('#authkey').val();
-     var customerCRMId = $('#customerCRMId').val();
-     var name = $('#name').val();
-     var password = $('#password').val();
-     var companyId = $('#companyId').val();
-     var clientType = $('#clientType').val();
-    
-    if(authkey == "" || customerCRMId == ""  || name == "" || password == "" || companyId == "" || clientType == ""){
-	   $('#resultado').html("Falta completar alguno de estos campos requeridos authkey, customerCRMId, name, password, companyId, clientType.");
- 	  return false;
-	}
-
-	return true;
-}
- 
- function mostrarResultado(){
-  
-  var customerCRMId, authkey, name, password, username, companyId, clientType, customerId,  disabled ,  email, saleId ,  sponsorId ,expirationDate,  billingCycleId,  hidden, lastlogin,  phone = "";
-
-  var url = $('#URL').val();
-  var customerCRMId = $('#customerCRMId').val();
-  var authkey = $('#authkey').val();
-  var name = $('#name').val();
-  var password = $('#password').val();
-  var username = $('#username').val();
-  var companyId = $('#companyId').val();
-  var clientType = $('#clientType').val();
-  var customerId = $('#customerId').val();
-  var disabled = $('#disabled').val();
-  var email = $('#email').val();
-  var saleId = $('#saleId').val();
-  var sponsorId = $('#sponsorId').val();
-  var expirationDate = $('#expirationDate').val();
-  var billingCycleId = $('#billingCycleId').val();
-  var hidden = $('#hidden').val();
-  var lastBillingDate = $('#lastBillingDate').val();
-  var changePassword = $('#changePassword').val();
-  var lastlogin = $('#lastlogin').val();
-  var phone = $('#phone').val();
-  var tipoTransaccion = $('#tipoTransaccion').val();
-     
-
-   $.ajax({
-        url: "get_test.php",
-	type: "POST",
-        data: {
-            url: url,
-		    name: name,
- 	        customerCRMId: customerCRMId,
- 		    authkey: authkey,
-	        password: password,
-	        companyId: companyId,
-	        clientType: clientType,
-	        username: username,
-	        customerId: customerId,
-	        disabled: disabled,
-	        email: email,
-	        saleId: saleId,
-	        sponsorId: sponsorId,
-	        expirationDate: expirationDate,
-	        billingCycleId: billingCycleId,
-	        hidden: hidden,
-	        lastBillingDate: lastBillingDate,
-	        changePassword: changePassword,
-	        lastlogin: lastlogin,
-	        phone: phone,
-            tipoTransaccion: tipoTransaccion
-	        
-        },
-	success: function(data){
-		$('#resultado').html(data);
-	}
-        });
-        
-}
-</script>
 
 
 
