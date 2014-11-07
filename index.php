@@ -20,10 +20,17 @@
 .imputadjust {
 	padding-left:0px;
 	margin-top:20px;
+	max-width: 95%;
+}
+
+.imputadjust {
+	padding-left:0px;
+	margin-top:20px;
+
 }
 
 .contenedor {
-	width:60%;
+	width:100%;
 	padding: 20px 20px 20px 20px;
 	margin:auto;
 }
@@ -37,8 +44,23 @@
 }
 .botonEnviar {
 	margin-top:50px;
-	margin-left:20%;
-	width:34%;
+	
+	width:95%;
+}
+.bs-callout {
+	padding:20px;
+	margin: 20px 0;
+	border:1px solid #eee;
+	border-left-width: 5px;
+	border-radius: 3px;
+}
+.bs-callout-warning {
+	border-left-color: #f0ad4e;
+
+
+}
+.bs-callout-alert {
+	border-left-color: #d9534f;
 }
     </style>
 	
@@ -115,15 +137,15 @@
  </select>
 </div>
 </div>
-<!-- ------------------------------------ BASE URL FIN ------------------------------------- --> 
 
-		<div class="col-md-4 column imputadjust">
+
+		<div class="col-md-3 column divadjust">
         
 
 
-<div class="input-group input-group-sm has-error">
+<div class="input-group input-group-sm has-error imputadjust">
 <span class="input-group-addon">Authkey</span>
-<input class="form-control has-error" type="text" id="authkey" placeholder="authkey" name="authkey" value="authkey">
+<input class="form-control has-error" type="text" id="authkey" placeholder="authkey" name="authkey">
 </div>
 
 <div class="input-group input-group-sm imputadjust has-error">
@@ -172,7 +194,7 @@
 
         
         
-		<div class="col-md-4 column">
+		<div class="col-md-3 column">
         
 <div class="input-group input-group-sm imputadjust">
 <span class="input-group-addon ">SalieId</span>
@@ -218,19 +240,27 @@
 <span class="input-group-addon ">Phone</span>
 <input class="form-control" type="text" id="phone" placeholder="phone" name="phone">
 </div>     
-    
+
+    <input type="button" class="btn btn-success botonEnviar" id="Enviar" value="Enviar" onclick="if(validate()){mostrarResultado()}"/>
 		</div>
         
         
         
-		<div class="col-md-4 column">
+				<div class="col-md-6 column">
+         <h3> RESPUESTA </h3>
+        		<div id="resultado" class="bs-callout bs-callout-warning">
+        			1. Colocar la url base<br>
+        			2. Elegir el metodo<br>
+        			3. Completar todos los campos<br>
+        			4. Enviar<br>
+
+        		</div>
         
-        <div id="resultado" class="well text-success" style="width: 90%; height:400px; margin: 8% 0px 0px 4%; background-color:white;">MENSAJE DE ERROR PIOLA</div>
         
-         
+
         </div>
 
-   <input type="button" class="btn btn-success botonEnviar" id="Enviar" value="Enviar" onclick="if(validate()){mostrarResultado()}"/>
+   
   
 </form>
 </div>
@@ -294,15 +324,15 @@
  
 function validate(){
     
-     var customerCRMId = $('#customerCRMId').val();
      var authkey = $('#authkey').val();
-     var username = $('#username').val();
+     var customerCRMId = $('#customerCRMId').val();
+     var name = $('#name').val();
      var password = $('#password').val();
      var companyId = $('#companyId').val();
      var clientType = $('#clientType').val();
     
-    if(customerCRMId == "" || authkey == ""  || companyId == ""){
-	   $('#resultado').html("Falta completar campos requeridos");
+    if(authkey == "" || customerCRMId == ""  || name == "" || password == "" || companyId == "" || clientType == ""){
+	   $('#resultado').html("Falta completar alguno de estos campos requeridos authkey, customerCRMId, name, password, companyId, clientType.");
  	  return false;
 	}
 
@@ -311,7 +341,7 @@ function validate(){
  
  function mostrarResultado(){
   
-  var customerCRMId, authkey, name, password, username, companyId, clientType, customerId,  disabled ,  email, saleId ,  sponsorId ,  billingCycleId,  hidden, lastlogin,  phone = "";
+  var customerCRMId, authkey, name, password, username, companyId, clientType, customerId,  disabled ,  email, saleId ,  sponsorId ,expirationDate,  billingCycleId,  hidden, lastlogin,  phone = "";
 
   var customerCRMId = $('#customerCRMId').val();
   var authkey = $('#authkey').val();
@@ -325,7 +355,7 @@ function validate(){
   var email = $('#email').val();
   var saleId = $('#saleId').val();
   var sponsorId = $('#sponsorId').val();
-  var expiratiionDate = $('#expiratiionDate').val();
+  var expirationDate = $('#expirationDate').val();
   var billingCycleId = $('#billingCycleId').val();
   var hidden = $('#hidden').val();
   var lastBillingDate = $('#lastBillingDate').val();
@@ -344,7 +374,19 @@ function validate(){
 	        password: password,
 	        companyId: companyId,
 	        clientType: clientType,
-	        username: username
+	        username: username,
+	        customerId: customerId,
+	        disabled: disabled,
+	        email: email,
+	        saleId: saleId,
+	        sponsorId: sponsorId,
+	        expirationDate: expirationDate,
+	        billingCycleId: billingCycleId,
+	        hidden: hidden,
+	        lastBillingDate: lastBillingDate,
+	        changePassword: changePassword,
+	        lastlogin: lastlogin,
+	        phone: phone,
 	        
         },
 	success: function(data){
