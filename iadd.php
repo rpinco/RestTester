@@ -123,7 +123,7 @@
 <input class="form-control" type="text" id="phone" placeholder="phone" name="phone">
 </div>     
 
-    <input type="btnSubmit" class="btn btn-success botonEnviar" id="Enviar" value="Enviar" onclick="{mostrarResultado()}"/>
+    <input type="btnSubmit" class="btn btn-success botonEnviar" id="Enviar" value="Enviar" onclick="if(validate()){mostrarResultado()}"/>
 		</div>
         
         
