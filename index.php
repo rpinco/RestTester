@@ -107,12 +107,13 @@
 <span class="input-group-addon labelimput">Base URL</span>
 <input type="text" class="form-control" id="URL" placeholder="url base" name="URL"/>
 
- <select class="span2" name="tipoTransaccion">
+<div class="input-group-btn">
+ <select class="dropdown-toggle btn btn-primary " name="tipoTransaccion">
         <option value="POST" name="post">POST</option>
         <option value="put" name="put">PUT</option>
         <option value="GET" name ="get">GET</option>
  </select>
-
+</div>
 </div>
 <!-------------------------------------- BASE URL FIN ---------------------------------------> 
 
@@ -295,7 +296,7 @@
  function mostrarResultado(){
   
 
-  var customerId = $('#customerCRMId').val();
+  var customerCRMId = $('#customerCRMId').val();
   var authkey = $('#authkey').val();
   var companyId = $('#companyId').val();
   var password = $('#password').val();
@@ -322,9 +323,25 @@
 	type: "POST",
         data: {
 		name: name,
+        customerCRMId: customerCRMId,
 		authkey: authkey,
 		companyId: companyId,
-		customerId: customerId
+        password: password,
+        companyId: companyId,
+        clientType: clientType,
+        username: username,
+        customerId: customerId,
+        disabled: disabled,
+        email: email,
+        saleId: saleId,
+        sponsorId: sponsorId,
+        expirationDate: expirationDate,
+        billingCycleId: billingCycleId,
+        hidden: hidden,
+        lastBillingDate: lastBillingDate,
+        changePassword: changePassword,
+        lastlogin: lastlogin,
+        phone: phone,
         },
 	success: function(data){
 		$('#resultado').html(data);
