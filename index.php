@@ -106,17 +106,13 @@
 <div class="input-group input-group-sm baseurl">
 <span class="input-group-addon labelimput">Base URL</span>
 <input type="text" class="form-control" id="URL" placeholder="url base" name="URL"/>
-<div class="input-group-btn">
-<button type="button" class="dropdown-toggle btn btn-primary" data-toggle="dropdown">
-Metodo
-<span class="caret"></span>
-</button>
-<ul class="dropdown-menu pull-right">
-<li><a href="#">POST</a></li>
-<li><a href="#">PUT</a></li>
-<li><a href="#">GET</a></li>
-</ul>
-</div>
+
+ <select class="span2" name="tipoTransaccion">
+        <option value="POST" name="post">POST</option>
+        <option value="put" name="put">PUT</option>
+        <option value="GET" name ="get">GET</option>
+ </select>
+
 </div>
 <!-------------------------------------- BASE URL FIN ---------------------------------------> 
 
@@ -227,13 +223,12 @@ Metodo
         
 		<div class="col-md-4 column">
         
-        <div class="well text-success" style="width: 90%; height:400px; margin: 8% 0px 0px 4%; background-color:white;">MENSAJE DE ERROR PIOLA</div>
+        <div id="resultado" class="well text-success" style="width: 90%; height:400px; margin: 8% 0px 0px 4%; background-color:white;">MENSAJE DE ERROR PIOLA</div>
         
          
         </div>
 
-
-        <input type="submit" class="btn btn-success botonEnviar" id="Enviar" value="Enviar"/>   
+   <input type="button" class="btn btn-success botonEnviar" id="Enviar" value="Enviar" onclick="if(validate()){mostrarResultado()}"/>
   
 </form>
 </div>
@@ -293,6 +288,34 @@ Metodo
 
 
 
+<script type="text/javascript">
+ 
+ function mostrarResultado(){
+  
+
+  var customerId = $('#customerCRMId').val();
+  var authkey = $('#authkey').val();
+  var companyId = $('#companyId').val();
+  var name = $('#name').val();
+
+  alert(name);
+
+   $.ajax({
+        url: "get_test.php",
+	type: "POST",
+        data: {
+		name: name,
+		authkey: authkey,
+		companyId: companyId,
+		customerId: customerId
+        },
+	success: function(data){
+		$('#resultado').html(data);
+	}
+        });
+        
+}
+</script>
 
 
 

@@ -1,5 +1,5 @@
 <?php
-//var_dump($_REQUEST);die;
+var_dump($_REQUEST);die;
 //enviar datos por post
 $service_url = $_REQUEST['url'];
 //var_dump($service_url);die;
