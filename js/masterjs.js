@@ -1,16 +1,5 @@
 function validate(){
-    
-     var authkey = $('#authkey').val();
-     var customerCRMId = $('#customerCRMId').val();
-     var name = $('#name').val();
-     var password = $('#password').val();
-     var companyId = $('#companyId').val();
-     var clientType = $('#clientType').val();
-    
-    if(authkey == "" || customerCRMId == ""  || name == "" || password == "" || companyId == "" || clientType == ""){
-	   $('#resultado').html("Falta completar alguno de estos campos requeridos authkey, customerCRMId, name, password, companyId, clientType.");
- 	  return false;
-	}
+  
 
 	return true;
 }

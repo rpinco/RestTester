@@ -131,21 +131,6 @@
           <input type="text" class="form-control" type="text" id="authkey" placeholder="authkey" name="authkey" value="somerandomauthkey">
           </div></div>
 
-
-          <div class="form-group">
-          <label class="col-lg-4 control-label ajustetexto">name</label>
-          <div class="input-group">
-          <span class="input-group-addon requerido"><i class="glyphicon glyphicon-exclamation-sign "></i></span>
-          <input class="form-control" type="text" id="name" placeholder="name" name="name" value="prueba00000">
-          </div></div>
-
-          <div class="form-group">
-          <label class="col-lg-4 control-label ajustetexto">Password</label>
-          <div class="input-group">
-          <span class="input-group-addon requerido"><i class="glyphicon glyphicon-exclamation-sign "></i></span>
-          <input class="form-control" type="text" id="password" placeholder="password" name="password" value="admin1234">
-          </div></div>
-
           <div class="form-group">
           <label class="col-lg-4 control-label ajustetexto">CompanyId</label>
           <div class="input-group">
@@ -153,10 +138,34 @@
           <input class="form-control" type="text" id="companyId" placeholder="companyId" name="companyId" value="572190">
           </div></div>
 
+
+          <div class="form-group">
+          <label class="col-lg-4 control-label ajustetexto">customerId</label>
+          <div class="input-group">
+          <span class="input-group-addon requerido"><i class="glyphicon glyphicon-exclamation-sign "></i></span>
+          <input class="form-control" type="text" id="customerId" placeholder="customerId" name="customerId">
+          </div>
+          </div>
+
+
+          <div class="form-group">
+          <label class="col-lg-4 control-label ajustetexto">name</label>
+          <div class="input-group">
+          <span class="input-group-addon norequerido"><i class="glyphicon glyphicon-exclamation-sign "></i></span>
+          <input class="form-control" type="text" id="name" placeholder="name" name="name" value="prueba00000">
+          </div></div>
+
+          <div class="form-group">
+          <label class="col-lg-4 control-label ajustetexto">Password</label>
+          <div class="input-group">
+          <span class="input-group-addon norequerido"><i class="glyphicon glyphicon-exclamation-sign "></i></span>
+          <input class="form-control" type="text" id="password" placeholder="password" name="password" value="admin1234">
+          </div></div>
+
           <div class="form-group">
           <label class="col-lg-4 control-label ajustetexto">ClientType</label>
           <div class="input-group">
-          <span class="input-group-addon requerido"><i class="glyphicon glyphicon-exclamation-sign "></i></span>
+          <span class="input-group-addon norequerido"><i class="glyphicon glyphicon-exclamation-sign "></i></span>
           <input class="form-control" type="text" id="clientType" placeholder="clientType" name="clientType" value="1">
           </div></div>
 
@@ -183,18 +192,21 @@
           </div></div>
 
 
+
+
+	</div>
+
+
+    <div class="col-md-3 column"> 
+
+
           <div class="form-group">
           <label class="col-lg-4 control-label ajustetexto">SalieId</label>
           <div class="input-group">
           <span class="input-group-addon norequerido"><i class="glyphicon glyphicon-leaf"></i></span>
           <input class="form-control" id="saleId" placeholder="saleId" name="saleId">
           </div>
-          </div>
-
-	</div>
-
-
-    <div class="col-md-3 column"> 
+          </div>    
 
 
           <div class="form-group">
@@ -261,13 +273,7 @@
           </div>
           </div>
 
-          <div class="form-group">
-          <label class="col-lg-4 control-label ajustetexto">customerId</label>
-          <div class="input-group">
-          <span class="input-group-addon norequerido"><i class="glyphicon glyphicon-leaf"></i></span>
-          <input class="form-control" type="text" id="customerId" placeholder="customerId" name="customerId">
-          </div>
-          </div>
+
 
 
 
