@@ -75,3 +75,30 @@ function validate(){
         });
         
 }
+
+
+ function mostrarResultadoGET(){
+  
+  var customerCRMId, authkey, name, password, username, companyId, clientType, customerId,  disabled ,  email, saleId ,  sponsorId ,expirationDate,  billingCycleId,  hidden, lastlogin,  phone = "";
+
+  var url = $('#URL').val();
+  var authkey = $('#authkey').val();
+  var companyId = $('#companyId').val();
+  var customerId = $('#customerId').val();
+  var tipoTransaccion = $('#tipoTransaccion').val();
+     
+  url = url + authkey + "/"+ companyId + "/" + customerId;   
+
+   $.ajax({
+        url: "get_test.php",
+	type: "POST",
+        data: {
+            url: url,
+	    tipoTransaccion: tipoTransaccion
+        },
+	success: function(data){
+		$('#resultado').html(data);
+	}
+        });
+
+}

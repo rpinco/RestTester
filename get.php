@@ -178,7 +178,7 @@
 
 
  			<div class="abajo">
-      <input type="btnSubmit" class="btn btn-info btn-lg btn-block" id="Enviar" value="Enviar" onclick="if(validate()){mostrarResultado()}"/>
+      <input type="btnSubmit" class="btn btn-info btn-lg btn-block" id="Enviar" value="Enviar" onclick="if(validate()){mostrarResultadoGET()}"/>
       
  				
 
