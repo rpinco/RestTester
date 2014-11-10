@@ -82,7 +82,7 @@
 
     		
                       <div class="page-header">
-                <h2 class="Titulo">Add Customer</h2>
+                <h2 class="Titulo">Get Customer</h2>
 
 
 
@@ -101,12 +101,10 @@
             <form id="elform" method="POST" action="get_test.php" enctype="multipart/form-data" class="form-horizontal"> 
 
                		
-               		<div class="input-group input-group-sm baseurl">
-							<input type="text" class="form-control" id="URL" placeholder="url base" name="URL" value="http://172.16.11.152/customerRest/web/customer/add/" />
-							<div class="input-group-btn">
-								<select class="dropdown-toggle btn btn-primary " name="tipoTransaccion" id="tipoTransaccion">
-        							<option value="POST" name="post">POST</option>
- 							 	</select>
+              <div class="input-group input-group-sm baseurl">
+              <input type="text" class="form-control" id="URL" placeholder="url base" name="URL" value="http://172.16.11.152/customerRest/web/customer/get/" />
+              <div class="input-group-btn">
+              <input class="btn btn-primary metodo" method="GET" value="GET" name="post" name="tipoTransaccion" id="tipoTransaccion">
 							</div>
 					    </div>
 

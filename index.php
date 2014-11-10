@@ -75,7 +75,7 @@
 
   </nav>
 
-<div class="container-fluid">
+<div class="container-fluid ajustediv">
 
 
     <div class="col-md-3 column">
@@ -101,12 +101,12 @@
             <form id="elform" method="POST" action="get_test.php" enctype="multipart/form-data" class="form-horizontal"> 
 
                		
-               		<div class="input-group input-group-sm baseurl">
+              <div class="input-group input-group-sm baseurl">
 							<input type="text" class="form-control" id="URL" placeholder="url base" name="URL" value="http://172.16.11.152/customerRest/web/customer/add/" />
 							<div class="input-group-btn">
-								<select class="dropdown-toggle btn btn-primary " name="tipoTransaccion" id="tipoTransaccion">
-        							<option value="POST" name="post">POST</option>
- 							 	</select>
+              <input class="btn btn-primary metodo" method="POST" value="POST" name="post" name="tipoTransaccion" id="tipoTransaccion">
+
+
 							</div>
 					    </div>
 

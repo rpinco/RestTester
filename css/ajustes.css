@@ -3,21 +3,8 @@
 	margin-top:50px;
 
 }
-
-.imputadjust2 {
-	max-width: 45%;
-	margin-top:50px;
-	margin-left: 15px;
-
-}
-
-
-.labelsize {
-	width:70px;
-}
 .botonEnviar {
-	margin-top:50px;
-	
+	margin-top:50px;	
 	width:95%;
 }
 .bs-callout {
@@ -30,9 +17,6 @@
 .bs-callout-warning {
 	border-left-color: #f0ad4e;
 
-}
-.bs-callout-alert {
-	border-left-color: #d9534f;
 }
 .iframesize{
 	width: 100%;
@@ -59,6 +43,13 @@
 		position: fixed;
 		bottom: 0px;
 		width: 100%;
+		z-index: 9999;
 
 }
+.ajustediv {
+	margin-bottom: 50px;
+}
 
+.metodo {
+	width: 70px;
+}

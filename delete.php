@@ -82,7 +82,7 @@
 
     		
                       <div class="page-header">
-                <h2 class="Titulo">Add Customer</h2>
+                <h2 class="Titulo">Delete Customer</h2>
 
 
 
@@ -101,14 +101,14 @@
             <form id="elform" method="POST" action="get_test.php" enctype="multipart/form-data" class="form-horizontal"> 
 
                		
-               		<div class="input-group input-group-sm baseurl">
-							<input type="text" class="form-control" id="URL" placeholder="url base" name="URL" value="http://172.16.11.152/customerRest/web/customer/add/" />
-							<div class="input-group-btn">
-								<select class="dropdown-toggle btn btn-primary " name="tipoTransaccion" id="tipoTransaccion">
-        							<option value="POST" name="post">POST</option>
- 							 	</select>
-							</div>
-					    </div>
+              <div class="input-group input-group-sm baseurl">
+              <input type="text" class="form-control" id="URL" placeholder="url base" name="URL" value="http://172.16.11.152/customerRest/web/customer/delete/" />
+              <div class="input-group-btn">
+              <input class="btn btn-primary metodo" method="put" value="PUT" name="put" name="tipoTransaccion" id="tipoTransaccion">
+
+
+              </div>
+              </div>
 
 
 
@@ -142,7 +142,7 @@
           <div class="form-group">
           <label class="col-lg-4 control-label ajustetexto">customerId</label>
           <div class="input-group">
-          <span class="input-group-addon norequerido"><i class="glyphicon glyphicon-leaf"></i></span>
+          <span class="input-group-addon requerido"><i class="glyphicon glyphicon-exclamation-sign "></i></span>
           <input class="form-control" type="text" id="customerId" placeholder="customerId" name="customerId">
           </div>
           </div>
