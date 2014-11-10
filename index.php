@@ -104,10 +104,8 @@
                		<div class="input-group input-group-sm baseurl">
 							<input type="text" class="form-control" id="URL" placeholder="url base" name="URL" value="http://172.16.11.152/customerRest/web/customer/add/" />
 							<div class="input-group-btn">
-								<select class="dropdown-toggle btn btn-primary " name="tipoTransaccion" id="tipoTransaccion">
-        							<option value="POST" name="post">POST</option>
- 							 	</select>
-							</div>
+        							<input type="text" class="form-control" value="POST" name="post" disabled="disabled" style="float:left"/>	
+					</div>
 					    </div>
 
 
