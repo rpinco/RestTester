@@ -29,14 +29,160 @@
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72-precomposed.png">
   <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-57-precomposed.png">
   <link rel="shortcut icon" href="img/favicon.png">
-  	<link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/ajustes.css" rel="stylesheet">
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/masterjs.js"></script>
-	<link rel="stylesheet" href="css/bootstrapValidator.css"/>
-	<script type="text/javascript" src="js/bootstrapValidator.js"></script>
 
+ <style type="text/css">
+#wrapper {
+  padding-left: 250px;
+  transition: all 0.4s ease 0s;
+}
+
+#sidebar-wrapper {
+  margin-left: -250px;
+  left: 250px;
+  width: 250px;
+  background: #000;
+  position: fixed;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 1000;
+  transition: all 0.4s ease 0s;
+}
+
+#wrapper.active {
+  padding-left: 0;
+}
+
+#wrapper.active #sidebar-wrapper {
+  left: 0;
+}
+
+#page-content-wrapper {
+  width: 100%;
+}
+
+
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-nav li {
+  line-height: 40px;
+  text-indent: 20px;
+}
+
+.sidebar-nav li a {
+  color: #999999;
+  display: block;
+  text-decoration: none;
+  padding-left: 60px;
+}
+
+.sidebar-nav li a span:before {
+  position: absolute;
+  left: 0;
+  color: #41484c;
+  text-align: center;
+  width: 20px;
+  line-height: 18px;
+}
+
+.sidebar-nav li a:hover,
+.sidebar-nav li.active {
+  color: #fff;
+  background: rgba(255,255,255,0.2);
+  text-decoration: none;
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+  text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+  height: 65px;
+  line-height: 60px;
+  font-size: 18px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+  color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+  color: #fff;
+  background: none;
+}
+
+
+
+.content-header {
+  height: 65px;
+  line-height: 65px;
+}
+
+.content-header h1 {
+  margin: 0;
+  margin-left: 20px;
+  line-height: 65px;
+  display: inline-block;
+}
+
+#menu-toggle {
+    text-decoration: none;
+}
+
+.btn-menu {
+  color: #000;
+} 
+
+.inset {
+  padding: 20px;
+}
+
+@media (max-width:767px) {
+
+#wrapper {
+  padding-left: 0;
+}
+
+#sidebar-wrapper {
+  left: 0;
+}
+
+#wrapper.active {
+  position: relative;
+  left: 250px;
+}
+
+#wrapper.active #sidebar-wrapper {
+  left: 250px;
+  width: 250px;
+  transition: all 0.4s ease 0s;
+}
+
+#menu-toggle {
+  display: inline-block;
+}
+
+.inset {
+  padding: 15px;
+}
+
+}
+
+
+ </style>
 
 
 </head>
@@ -44,7 +190,7 @@
 <body>
 
 
-<nav class="navbar navbar-default" role="navigation" style="margin-bottom: 0;">
+<nav class="navbar navbar-default navfixed" role="navigation" style="margin-bottom: 0;">
   <div class="container">
   <!-- Brand and toggle get grouped for better mobile display -->
   		<div class="navbar-header">
@@ -75,238 +221,121 @@
 
   </nav>
 
-<div class="container-fluid">
+<div id="wrapper">
 
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <nav id="spy">
+                <ul class="sidebar-nav nav">
+                    <li class="sidebar-brand">
+                        <a href="#home"><span class="fa fa-home solo">Home</span></a>
+                    </li>
+                    <li>
+                        <a href="#anch1" data-scroll>
+                            <span class="fa fa-anchor solo">Anchor 1</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#anch2" data-scroll>
+                            <span class="fa fa-anchor solo">Anchor 2</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#anch3" data-scroll>
+                            <span class="fa fa-anchor solo">Anchor 3</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#anch4" data-scroll>
+                            <span class="fa fa-anchor solo">Anchor 4</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
 
-    <div class="col-md-3 column">
-
-    		
-                      <div class="page-header">
-                <h2 class="Titulo">Add Customer</h2>
-
-
-
-
-
-            		</div>
-
-            			<p>Campos Requeridos <i class="glyphicon glyphicon-exclamation-sign requerido"></i></p>
-                  <p>Campos Optativos <i class="glyphicon glyphicon-leaf norequerido"></i>
-
-
-           					 <div class="from-horizontal">
-
-            	         	<legend>URL BASE</legend>
-
-            <form id="elform" method="POST" action="get_test.php" enctype="multipart/form-data" class="form-horizontal"> 
-
-               		
-               		<div class="input-group input-group-sm baseurl">
-							<input type="text" class="form-control" id="URL" placeholder="url base" name="URL" value="http://172.16.11.152/customerRest/web/customer/add/" />
-							<div class="input-group-btn">
-								<select class="dropdown-toggle btn btn-primary " name="tipoTransaccion" id="tipoTransaccion">
-        							<option value="POST" name="post">POST</option>
- 							 	</select>
-							</div>
-					    </div>
-
-
-
-
+        <!-- Page content -->
+        <div id="page-content-wrapper ">
+            <div class="content-header infoajuste">
+                <h1 id="home">
+                    <a id="menu-toggle" href="#" class="glyphicon glyphicon-align-justify btn-menu toggle">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                    Sidebar Navigation Template
+                </h1>
             </div>
 
+            <div class="page-content inset" data-spy="scroll" data-target="#spy">
+                <div class="row">
+  
+                        <div class="jumbotron text-center" >
+                            <h1>Hello Beautiful!</h1>
+                            <p>This is a sidebar navigation responsive template built off of Bootstrap 3.0 and simple sidebar template. It includes anchors, scroll spy, smooth scroll, and Awesome icon fonts.</p>
+                            <p><a class="btn btn-default">Click On Me!</a>
+                            <a class="btn btn-info">Tweet Me!</a></p>
+                        </div>
+    
+                </div>
+                <div class="row">
+                    <div class="col-md-12 well">
+                        <legend id="anch1">Anchor 1</legend>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultricies, metus eget fringilla fermentum, sem justo pulvinar tellus, ac varius neque ante eget mi. Donec cursus nibh ultrices vulputate aliquet. Morbi nulla enim, molestie eu ullamcorper quis, placerat a mauris. Proin vel magna ullamcorper, vulputate leo eu, egestas odio. Vivamus erat leo, egestas in euismod sed, fermentum nec magna. Nunc nisi enim, euismod a tellus sit amet, fermentum adipiscing ipsum. Fusce rhoncus diam ac neque aliquam convallis. Etiam malesuada, nibh id rutrum euismod, enim augue gravida dolor, at vulputate felis mi at magna. Nulla luctus, libero eget luctus gravida, sapien enim varius massa, adipiscing aliquet lacus mi eu eros. Duis pretium laoreet ullamcorper. Aenean in mauris nec libero tincidunt pharetra non et dui. Sed tortor turpis, mollis et tempus eu, auctor laoreet neque. Etiam eu tortor rutrum, rutrum mauris sit amet, hendrerit augue. Sed ut tincidunt nisi. Nam consectetur velit ac pharetra venenatis.</p>
+                        <p>Donec pellentesque id quam vel iaculis. Phasellus commodo tempor metus, eget sollicitudin odio ultricies id. Proin sed ipsum quis turpis suscipit luctus vitae id urna. Fusce et rhoncus quam. Etiam vel justo ligula. Nullam euismod lacinia risus a pulvinar. Pellentesque sit amet nisl eget ante vulputate feugiat. Suspendisse venenatis magna nunc, mollis facilisis neque condimentum ac. Vivamus non semper dui. Aenean sed eleifend dui. Vivamus a massa aliquam nibh consectetur luctus id at ligula. Nunc ipsum dolor, mollis at sem et, auctor rhoncus ipsum. Nulla faucibus venenatis est sit amet facilisis. In vestibulum nisi at tellus egestas, in pharetra enim fringilla. In ac erat non magna accumsan aliquam.</p>
+                    </div>
+                    <div class="col-md-12 well">
+                        <legend id="anch2">Anchor 2</legend>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultricies, metus eget fringilla fermentum, sem justo pulvinar tellus, ac varius neque ante eget mi. Donec cursus nibh ultrices vulputate aliquet. Morbi nulla enim, molestie eu ullamcorper quis, placerat a mauris. Proin vel magna ullamcorper, vulputate leo eu, egestas odio. Vivamus erat leo, egestas in euismod sed, fermentum nec magna. Nunc nisi enim, euismod a tellus sit amet, fermentum adipiscing ipsum. Fusce rhoncus diam ac neque aliquam convallis. Etiam malesuada, nibh id rutrum euismod, enim augue gravida dolor, at vulputate felis mi at magna. Nulla luctus, libero eget luctus gravida, sapien enim varius massa, adipiscing aliquet lacus mi eu eros. Duis pretium laoreet ullamcorper. Aenean in mauris nec libero tincidunt pharetra non et dui. Sed tortor turpis, mollis et tempus eu, auctor laoreet neque. Etiam eu tortor rutrum, rutrum mauris sit amet, hendrerit augue. Sed ut tincidunt nisi. Nam consectetur velit ac pharetra venenatis.</p>
+                        <p>Donec pellentesque id quam vel iaculis. Phasellus commodo tempor metus, eget sollicitudin odio ultricies id. Proin sed ipsum quis turpis suscipit luctus vitae id urna. Fusce et rhoncus quam. Etiam vel justo ligula. Nullam euismod lacinia risus a pulvinar. Pellentesque sit amet nisl eget ante vulputate feugiat. Suspendisse venenatis magna nunc, mollis facilisis neque condimentum ac. Vivamus non semper dui. Aenean sed eleifend dui. Vivamus a massa aliquam nibh consectetur luctus id at ligula. Nunc ipsum dolor, mollis at sem et, auctor rhoncus ipsum. Nulla faucibus venenatis est sit amet facilisis. In vestibulum nisi at tellus egestas, in pharetra enim fringilla. In ac erat non magna accumsan aliquam.</p>
+                    </div>
+                    <div class="col-md-12 well">
+                        <legend id="anch3">Anchor 3</legend>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultricies, metus eget fringilla fermentum, sem justo pulvinar tellus, ac varius neque ante eget mi. Donec cursus nibh ultrices vulputate aliquet. Morbi nulla enim, molestie eu ullamcorper quis, placerat a mauris. Proin vel magna ullamcorper, vulputate leo eu, egestas odio. Vivamus erat leo, egestas in euismod sed, fermentum nec magna. Nunc nisi enim, euismod a tellus sit amet, fermentum adipiscing ipsum. Fusce rhoncus diam ac neque aliquam convallis. Etiam malesuada, nibh id rutrum euismod, enim augue gravida dolor, at vulputate felis mi at magna. Nulla luctus, libero eget luctus gravida, sapien enim varius massa, adipiscing aliquet lacus mi eu eros. Duis pretium laoreet ullamcorper. Aenean in mauris nec libero tincidunt pharetra non et dui. Sed tortor turpis, mollis et tempus eu, auctor laoreet neque. Etiam eu tortor rutrum, rutrum mauris sit amet, hendrerit augue. Sed ut tincidunt nisi. Nam consectetur velit ac pharetra venenatis.</p>
+                        <p>Donec pellentesque id quam vel iaculis. Phasellus commodo tempor metus, eget sollicitudin odio ultricies id. Proin sed ipsum quis turpis suscipit luctus vitae id urna. Fusce et rhoncus quam. Etiam vel justo ligula. Nullam euismod lacinia risus a pulvinar. Pellentesque sit amet nisl eget ante vulputate feugiat. Suspendisse venenatis magna nunc, mollis facilisis neque condimentum ac. Vivamus non semper dui. Aenean sed eleifend dui. Vivamus a massa aliquam nibh consectetur luctus id at ligula. Nunc ipsum dolor, mollis at sem et, auctor rhoncus ipsum. Nulla faucibus venenatis est sit amet facilisis. In vestibulum nisi at tellus egestas, in pharetra enim fringilla. In ac erat non magna accumsan aliquam.</p>
+                    </div>
+                    <div class="col-md-12 well">
+                        <legend id="anch4">Anchor 4</legend>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultricies, metus eget fringilla fermentum, sem justo pulvinar tellus, ac varius neque ante eget mi. Donec cursus nibh ultrices vulputate aliquet. Morbi nulla enim, molestie eu ullamcorper quis, placerat a mauris. Proin vel magna ullamcorper, vulputate leo eu, egestas odio. Vivamus erat leo, egestas in euismod sed, fermentum nec magna. Nunc nisi enim, euismod a tellus sit amet, fermentum adipiscing ipsum. Fusce rhoncus diam ac neque aliquam convallis. Etiam malesuada, nibh id rutrum euismod, enim augue gravida dolor, at vulputate felis mi at magna. Nulla luctus, libero eget luctus gravida, sapien enim varius massa, adipiscing aliquet lacus mi eu eros. Duis pretium laoreet ullamcorper. Aenean in mauris nec libero tincidunt pharetra non et dui. Sed tortor turpis, mollis et tempus eu, auctor laoreet neque. Etiam eu tortor rutrum, rutrum mauris sit amet, hendrerit augue. Sed ut tincidunt nisi. Nam consectetur velit ac pharetra venenatis.</p>
+                        <p>Donec pellentesque id quam vel iaculis. Phasellus commodo tempor metus, eget sollicitudin odio ultricies id. Proin sed ipsum quis turpis suscipit luctus vitae id urna. Fusce et rhoncus quam. Etiam vel justo ligula. Nullam euismod lacinia risus a pulvinar. Pellentesque sit amet nisl eget ante vulputate feugiat. Suspendisse venenatis magna nunc, mollis facilisis neque condimentum ac. Vivamus non semper dui. Aenean sed eleifend dui. Vivamus a massa aliquam nibh consectetur luctus id at ligula. Nunc ipsum dolor, mollis at sem et, auctor rhoncus ipsum. Nulla faucibus venenatis est sit amet facilisis. In vestibulum nisi at tellus egestas, in pharetra enim fringilla. In ac erat non magna accumsan aliquam.</p>
+                    </div>
+                </div>
 
-                <fieldset>
+                <div class="navbar navbar-default navbar-static-bottom">
+                    <p class="navbar-text pull-left">
+                        Built by <a href="http://mvnguyen.com" target="_blank">Michael V Nguyen
+                    </p>
+                </div>
+            </div>
 
-                    <legend><br>Valores</legend>
-                    
-
-
-
-
-          <div class="form-group">
-          <label class="col-lg-4 control-label ajustetexto">Authkey</label>
-          <div class="input-group">
-          <span class="input-group-addon requerido"><i class="glyphicon glyphicon-exclamation-sign "></i></span>
-          <input type="text" class="form-control" type="text" id="authkey" placeholder="authkey" name="authkey" value="somerandomauthkey">
-          </div></div>
-
-          <div class="form-group">
-          <label class="col-lg-4 control-label ajustetexto">CustomerCRMId</label>
-          <div class="input-group">
-          <span class="input-group-addon requerido"><i class="glyphicon glyphicon-exclamation-sign "></i></span>
-          <input class="form-control" type="text" id="customerCRMId" placeholder="customerCRMId" name="customerCRMId">
-          </div></div>
-
-          <div class="form-group">
-          <label class="col-lg-4 control-label ajustetexto">name</label>
-          <div class="input-group">
-          <span class="input-group-addon requerido"><i class="glyphicon glyphicon-exclamation-sign "></i></span>
-          <input class="form-control" type="text" id="name" placeholder="name" name="name" value="prueba00000">
-          </div></div>
-
-          <div class="form-group">
-          <label class="col-lg-4 control-label ajustetexto">Password</label>
-          <div class="input-group">
-          <span class="input-group-addon requerido"><i class="glyphicon glyphicon-exclamation-sign "></i></span>
-          <input class="form-control" type="text" id="password" placeholder="password" name="password" value="admin1234">
-          </div></div>
-
-          <div class="form-group">
-          <label class="col-lg-4 control-label ajustetexto">CompanyId</label>
-          <div class="input-group">
-          <span class="input-group-addon requerido"><i class="glyphicon glyphicon-exclamation-sign "></i></span>
-          <input class="form-control" type="text" id="companyId" placeholder="companyId" name="companyId" value="572190">
-          </div></div>
-
-          <div class="form-group">
-          <label class="col-lg-4 control-label ajustetexto">ClientType</label>
-          <div class="input-group">
-          <span class="input-group-addon requerido"><i class="glyphicon glyphicon-exclamation-sign "></i></span>
-          <input class="form-control" type="text" id="clientType" placeholder="clientType" name="clientType" value="1">
-          </div></div>
-
-          <div class="form-group">
-          <label class="col-lg-4 control-label ajustetexto">Username</label>
-          <div class="input-group">
-          <span class="input-group-addon norequerido"><i class="glyphicon glyphicon-leaf"></i></span>
-          <input class="form-control" type="text" id="username" placeholder="username" name="username">
-          </div></div>
-
-          <div class="form-group">
-          <label class="col-lg-4 control-label ajustetexto">Disabled</label>
-          <div class="input-group">
-          <span class="input-group-addon norequerido"><i class="glyphicon glyphicon-leaf"></i></span>
-          <input class="form-control" type="text" id="disabled" placeholder="disabled" name="disabled">
-          </div></div>
-
-
-          <div class="form-group">
-          <label class="col-lg-4 control-label ajustetexto">Email</label>
-          <div class="input-group">
-          <span class="input-group-addon norequerido"><i class="glyphicon glyphicon-leaf"></i></span>
-          <input class="form-control" type="text" id="email" placeholder="email" name="email">
-          </div></div>
-
-	</div>
-
-
-    <div class="col-md-3 column"> 
-
-          <div class="form-group">
-          <label class="col-lg-4 control-label ajustetexto">SalieId</label>
-          <div class="input-group">
-          <span class="input-group-addon norequerido"><i class="glyphicon glyphicon-leaf"></i></span>
-          <input class="form-control" id="saleId" placeholder="saleId" name="saleId">
-          </div>
-          </div>
-
-          <div class="form-group">
-          <label class="col-lg-4 control-label ajustetexto">SponsorId</label>
-          <div class="input-group">
-          <span class="input-group-addon norequerido"><i class="glyphicon glyphicon-leaf"></i></span>
-          <input class="form-control" id="sponsorId" placeholder="sponsorId" name="sponsorId">
-          </div>
-          </div>
-
-          <div class="form-group">
-          <label class="col-lg-4 control-label ajustetexto">ExpirationDate</label>
-          <div class="input-group">
-          <span class="input-group-addon norequerido"><i class="glyphicon glyphicon-leaf"></i></span>
-          <input class="form-control" id="expirationDate" placeholder="expirationDate" name="expirationDate">
-          </div>
-          </div>
-
-          <div class="form-group">
-          <label class="col-lg-4 control-label ajustetexto">BillingCycleId</label>
-          <div class="input-group">
-          <span class="input-group-addon norequerido"><i class="glyphicon glyphicon-leaf"></i></span>
-          <input class="form-control" id="billingCycleId" placeholder="billingCycleId" name="billingCycleId">
-          </div>
-          </div>
-
-          <div class="form-group">
-          <label class="col-lg-4 control-label ajustetexto">Hidden</label>
-          <div class="input-group">
-          <span class="input-group-addon norequerido"><i class="glyphicon glyphicon-leaf"></i></span>
-          <input class="form-control" id="hidden" placeholder="hidden" name="hidden">
-          </div>
-          </div>
-
-          <div class="form-group">
-          <label class="col-lg-4 control-label ajustetexto">LastBillingDate</label>
-          <div class="input-group">
-          <span class="input-group-addon norequerido"><i class="glyphicon glyphicon-leaf"></i></span>
-          <input class="form-control" id="lastBillingDate" placeholder="lastBillingDate" name="lastBillingDate">
-          </div>
-          </div>
-
-          <div class="form-group">
-          <label class="col-lg-4 control-label ajustetexto">ChangePassword</label>
-          <div class="input-group">
-          <span class="input-group-addon norequerido"><i class="glyphicon glyphicon-leaf"></i></span>
-          <input class="form-control" id="changePassword" placeholder="changePassword" name="changePassword">
-          </div>
-          </div>
-
-          <div class="form-group">
-          <label class="col-lg-4 control-label ajustetexto">Lastlogin</label>
-          <div class="input-group">
-          <span class="input-group-addon norequerido"><i class="glyphicon glyphicon-leaf"></i></span>
-          <input class="form-control" type="text" id="lastlogin" placeholder="lastlogin" name="lastlogin">
-          </div>
-          </div>
-
-          <div class="form-group">
-          <label class="col-lg-4 control-label ajustetexto">Phone</label>
-          <div class="input-group">
-          <span class="input-group-addon norequerido"><i class="glyphicon glyphicon-leaf"></i></span>
-          <input class="form-control" type="text" id="phone" placeholder="phone" name="phone">
-          </div>
-          </div>
-
-          <div class="form-group">
-          <label class="col-lg-4 control-label ajustetexto">customerId</label>
-          <div class="input-group">
-          <span class="input-group-addon norequerido"><i class="glyphicon glyphicon-leaf"></i></span>
-          <input class="form-control" type="text" id="customerId" placeholder="customerId" name="customerId">
-          </div>
-          </div>
-
-
-
-
- </fieldset>
-
- </div>
-
-
-
-    <div class="col-md-6 column respuesta"> 
-
-    	 <h3> RESPUESTA </h3>
-        		<div id="resultado" class="bs-callout bs-callout-warning">
-        			1. Colocar la url base<br>
-        			2. Elegir el metodo<br>
-        			3. Completar todos los campos<br>
-        			4. Enviar<br>
+        </div>
 
     </div>
+ 		<script type="text/javascript">
 
-    </div>
+  /*Menu-toggle*/
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("active");
+    });
 
+    /*Scroll Spy*/
+    $('body').scrollspy({ target: '#spy', offset:80});
 
-  </div>
+    /*Smooth link animation*/
+    $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
 
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('html,body').animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+                return false;
+            }
+        }
+    });
 
- 			<div class="abajo">
-      <input type="btnSubmit" class="btn btn-info btn-lg btn-block" id="Enviar" value="Enviar" onclick="if(validate()){mostrarResultado()}"/>
-      
- 				
-
- 			</div>
- 					
- 		</form>
+    </script>			
 
 
 

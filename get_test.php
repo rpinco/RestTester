@@ -4,7 +4,30 @@
 $service_url = $_REQUEST['url'];
 //var_dump($service_url);die;
 
-$data = array("authkey" => $_REQUEST['authkey'], "customerCRMId" => $_REQUEST['customerCRMId'], 'name'=> $_REQUEST['name'], "password" => $_REQUEST['password'], "companyId" => $_REQUEST['companyId'], "clientType" => $_REQUEST['clientType'], "username" => $_REQUEST['username'], "customerId" => $_REQUEST['customerId'], "disabled" => $_REQUEST['disabled'], "email" => $_REQUEST['email'], "saleId" => $_REQUEST['saleId'], "sponsorId" => $_REQUEST['sponsorId'], "expirationDate" => $_REQUEST['expirationDate'], "billingCycleId" => $_REQUEST['billingCycleId'], "hidden" => $_REQUEST['hidden'], "lastBillingDate" => $_REQUEST['lastBillingDate'], "changePassword" => $_REQUEST['changePassword'], "lastlogin" => $_REQUEST['lastlogin'], "phone" => $_REQUEST['phone']);
+$authkey = ($_REQUEST['authkey'])?$_REQUEST['authkey']:null;
+$customerCRMId = ($_REQUEST['customerCRMId'])?$_REQUEST['customerCRMId']:null;
+$name = ($_REQUEST['name'])?$_REQUEST['name']:null;
+$password = ($_REQUEST['password'])?$_REQUEST['password']:null;
+$companyId = ($_REQUEST['companyId'])?$_REQUEST['companyId']:null;
+$clientType = ($_REQUEST['clientType'])?$_REQUEST['clientType']:null;
+$username = ($_REQUEST['username'])?$_REQUEST['username']:null;
+$customerId = ($_REQUEST['customerId'])?$_REQUEST['customerId']:null;
+$disabled = ($_REQUEST['disabled'])?$_REQUEST['disabled']:null;
+$email = ($_REQUEST['email'])?$_REQUEST['email']:null;
+$saleId = ($_REQUEST['saleId'])?$_REQUEST['saleId']:null;
+$sponsorId = ($_REQUEST['sponsorId'])?$_REQUEST['sponsorId']:null;
+$expirationDate = ($_REQUEST['expirationDate'])?$expirationDate['name']:null;
+$billingCycleId = ($_REQUEST['billingCycleId'])?$_REQUEST['billingCycleId']:null;
+$hidden = ($_REQUEST['hidden'])?$_REQUEST['hidden']:null;
+$lastBillingDate = ($_REQUEST['lastBillingDate'])?$_REQUEST['lastBillingDate']:null;
+$changePassword = ($_REQUEST['changePassword'])?$_REQUEST['changePassword']:null;
+$lastlogin = ($_REQUEST['lastlogin'])?$_REQUEST['lastlogin']:null;
+$phone = ($_REQUEST['phone'])?$_REQUEST['phone']:null;
+
+
+
+$data = array("authkey" => $authkey['authkey'], "customerCRMId" => $customerCRMId['customerCRMId'], 'name'=> $name['name'], "password" => $password['password'], "companyId" => $companyId['companyId'], "clientType" => $clientType['clientType'], "username" => $username['username'], "customerId" => $customerId['customerId'], "disabled" => $disabled['disabled'], "email" => $email['email'], "saleId" => $saleId['saleId'], "sponsorId" => $sponsorId['sponsorId'], "expirationDate" => $expirationDate['expirationDate'], "billingCycleId" => $billingCycleId['billingCycleId'], "hidden" => $hidden['hidden'], "lastBillingDate" => $lastBillingDate['lastBillingDate'], "changePassword" => $changePassword['changePassword'], "lastlogin" => $lastlogin['lastlogin'], "phone" => $_REQUEST['phone']);
+
 // $data_string = json_encode($data);
 //var_dump($data);die;
 $data_string = http_build_query($data);

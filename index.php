@@ -90,8 +90,8 @@
 
             		</div>
 
-            			<p>Campos Requeridos <i class="glyphicon glyphicon-exclamation-sign requerido"></i></p>
-                  <p>Campos Optativos <i class="glyphicon glyphicon-leaf norequerido"></i>
+            			<p>Requiered Field <i class="glyphicon glyphicon-exclamation-sign requerido"></i></p>
+                  <p>Optative Field <i class="glyphicon glyphicon-leaf norequerido"></i>
 
 
            					 <div class="from-horizontal">
@@ -118,7 +118,7 @@
 
                 <fieldset>
 
-                    <legend><br>Valores</legend>
+                    <legend><br>Values</legend>
                     
 
 
@@ -284,7 +284,7 @@
 
     <div class="col-md-6 column respuesta"> 
 
-    	 <h3> RESPUESTA </h3>
+    	 <h3> RESPONSE </h3>
         		<div id="resultado" class="bs-callout bs-callout-warning">
         			1. Colocar la url base<br>
         			2. Elegir el metodo<br>

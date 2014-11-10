@@ -51,3 +51,12 @@
 .respuesta {
 	margin-bottom: 100px;
 }
+.navfixed {
+	position: fixed;
+	margin-top: -50px;
+	width: 100%;
+	z-index: 9999;
+}
+.infoajuste{
+	margin-top: 50px;
+}
