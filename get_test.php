@@ -4,25 +4,25 @@
 $service_url = $_REQUEST['url'];
 //var_dump($service_url);die;
 
-$authkey = ($_REQUEST['authkey'])?$_REQUEST['authkey']:null;
-$customerCRMId = ($_REQUEST['customerCRMId'])?$_REQUEST['customerCRMId']:null;
-$name = ($_REQUEST['name'])?$_REQUEST['name']:null;
-$password = ($_REQUEST['password'])?$_REQUEST['password']:null;
-$companyId = ($_REQUEST['companyId'])?$_REQUEST['companyId']:null;
-$clientType = ($_REQUEST['clientType'])?$_REQUEST['clientType']:null;
-$username = ($_REQUEST['username'])?$_REQUEST['username']:null;
-$customerId = ($_REQUEST['customerId'])?$_REQUEST['customerId']:null;
-$disabled = ($_REQUEST['disabled'])?$_REQUEST['disabled']:null;
-$email = ($_REQUEST['email'])?$_REQUEST['email']:null;
-$saleId = ($_REQUEST['saleId'])?$_REQUEST['saleId']:null;
-$sponsorId = ($_REQUEST['sponsorId'])?$_REQUEST['sponsorId']:null;
-$expirationDate = ($_REQUEST['expirationDate'])?$expirationDate['name']:null;
-$billingCycleId = ($_REQUEST['billingCycleId'])?$_REQUEST['billingCycleId']:null;
-$hidden = ($_REQUEST['hidden'])?$_REQUEST['hidden']:null;
-$lastBillingDate = ($_REQUEST['lastBillingDate'])?$_REQUEST['lastBillingDate']:null;
-$changePassword = ($_REQUEST['changePassword'])?$_REQUEST['changePassword']:null;
-$lastlogin = ($_REQUEST['lastlogin'])?$_REQUEST['lastlogin']:null;
-$phone = ($_REQUEST['phone'])?$_REQUEST['phone']:null;
+$authkey = (isset($_REQUEST['authkey']))?$_REQUEST['authkey']:null;
+$customerCRMId = (isset($_REQUEST['customerCRMId']))?$_REQUEST['customerCRMId']:null;
+$name = (isset($_REQUEST['name']))?$_REQUEST['name']:null;
+$password = (isset ($_REQUEST['password']))?$_REQUEST['password']:null;
+$companyId = (isset($_REQUEST['companyId']))?$_REQUEST['companyId']:null;
+$clientType = (isset($_REQUEST['clientType']))?$_REQUEST['clientType']:null;
+$username = (isset($_REQUEST['username']))?$_REQUEST['username']:null;
+$customerId = (isset($_REQUEST['customerId']))?$_REQUEST['customerId']:null;
+$disabled = (isset($_REQUEST['disabled']))?$_REQUEST['disabled']:null;
+$email = (isset($_REQUEST['email']))?$_REQUEST['email']:null;
+$saleId = (isset($_REQUEST['saleId']))?$_REQUEST['saleId']:null;
+$sponsorId = (isset($_REQUEST['sponsorId']))?$_REQUEST['sponsorId']:null;
+$expirationDate = (isset($_REQUEST['expirationDate']))?$_REQUEST['expirationDate']:null;
+$billingCycleId = (isset($_REQUEST['billingCycleId']))?$_REQUEST['billingCycleId']:null;
+$hidden = (isset($_REQUEST['hidden']))?$_REQUEST['hidden']:null;
+$lastBillingDate = (isset($_REQUEST['lastBillingDate']))?$_REQUEST['lastBillingDate']:null;
+$changePassword = (isset($_REQUEST['changePassword']))?$_REQUEST['changePassword']:null;
+$lastlogin = (isset($_REQUEST['lastlogin']))?$_REQUEST['lastlogin']:null;
+$phone = (isset($_REQUEST['phone']))?$_REQUEST['phone']:null;
 
 
 

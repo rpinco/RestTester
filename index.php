@@ -166,6 +166,15 @@
           <input class="form-control" type="text" id="clientType" placeholder="clientType" name="clientType" value="1">
           </div></div>
 
+
+          <div class="form-group">
+          <label class="col-lg-4 control-label ajustetexto">customerId</label>
+          <div class="input-group">
+          <span class="input-group-addon norequerido"><i class="glyphicon glyphicon-leaf"></i></span>
+          <input class="form-control" type="text" id="customerId" placeholder="customerId" name="customerId">
+          </div>
+          </div>
+
           <div class="form-group">
           <label class="col-lg-4 control-label ajustetexto">Username</label>
           <div class="input-group">
@@ -181,17 +190,19 @@
           </div></div>
 
 
+
+
+	</div>
+
+
+    <div class="col-md-3 column"> 
+
           <div class="form-group">
           <label class="col-lg-4 control-label ajustetexto">Email</label>
           <div class="input-group">
           <span class="input-group-addon norequerido"><i class="glyphicon glyphicon-leaf"></i></span>
           <input class="form-control" type="text" id="email" placeholder="email" name="email">
           </div></div>
-
-	</div>
-
-
-    <div class="col-md-3 column"> 
 
           <div class="form-group">
           <label class="col-lg-4 control-label ajustetexto">SalieId</label>
@@ -265,13 +276,7 @@
           </div>
           </div>
 
-          <div class="form-group">
-          <label class="col-lg-4 control-label ajustetexto">customerId</label>
-          <div class="input-group">
-          <span class="input-group-addon norequerido"><i class="glyphicon glyphicon-leaf"></i></span>
-          <input class="form-control" type="text" id="customerId" placeholder="customerId" name="customerId">
-          </div>
-          </div>
+
 
 
 
@@ -300,7 +305,7 @@
 
 
  			<div class="abajo">
-      <input type="btnSubmit" class="btn btn-info btn-lg btn-block" id="Enviar" value="Enviar" onclick="if(validate()){mostrarResultado()}"/>
+      <input type="btnSubmit" class="btn btn-info btn-lg btn-block" id="Enviar" value="Enviar" onclick="{mostrarResultado()}"/>
       
  				
 
