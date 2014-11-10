@@ -26,7 +26,7 @@ $phone = ($_REQUEST['phone'])?$_REQUEST['phone']:null;
 
 
 
-$data = array("authkey" => $authkey['authkey'], "customerCRMId" => $customerCRMId['customerCRMId'], 'name'=> $name['name'], "password" => $password['password'], "companyId" => $companyId['companyId'], "clientType" => $clientType['clientType'], "username" => $username['username'], "customerId" => $customerId['customerId'], "disabled" => $disabled['disabled'], "email" => $email['email'], "saleId" => $saleId['saleId'], "sponsorId" => $sponsorId['sponsorId'], "expirationDate" => $expirationDate['expirationDate'], "billingCycleId" => $billingCycleId['billingCycleId'], "hidden" => $hidden['hidden'], "lastBillingDate" => $lastBillingDate['lastBillingDate'], "changePassword" => $changePassword['changePassword'], "lastlogin" => $lastlogin['lastlogin'], "phone" => $_REQUEST['phone']);
+$data = array("authkey" => $authkey, "customerCRMId" => $customerCRMId, 'name'=> $name, "password" => $password, "companyId" => $companyId, "clientType" => $clientType, "username" => $username, "customerId" => $customerId, "disabled" => $disabled, "email" => $email, "saleId" => $saleId, "sponsorId" => $sponsorId, "expirationDate" => $expirationDate, "billingCycleId" => $billingCycleId, "hidden" => $hidden, "lastBillingDate" => $lastBillingDate, "changePassword" => $changePassword, "lastlogin" => $lastlogin, "phone" => $phone);
 
 // $data_string = json_encode($data);
 //var_dump($data);die;
