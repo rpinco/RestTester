@@ -104,10 +104,15 @@
               <div class="input-group input-group-sm baseurl">
 							<input type="text" class="form-control" id="URL" placeholder="url base" name="URL" value="http://172.16.11.152/customerRest/web/customer/add/" />
 							<div class="input-group-btn">
+<<<<<<< HEAD
               <input class="btn btn-primary metodo" method="POST" value="POST" name="post" name="tipoTransaccion" id="tipoTransaccion">
 
 
 							</div>
+=======
+        							<input type="text" class="form-control" value="POST" name="post" disabled="disabled" style="float:left"/>	
+					</div>
+>>>>>>> origin/master
 					    </div>
 
 
