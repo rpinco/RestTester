@@ -1,7 +1,5 @@
 .imputadjust {
-
 	margin-top:50px;
-
 }
 .botonEnviar {
 	margin-top:50px;	
@@ -16,7 +14,6 @@
 }
 .bs-callout-warning {
 	border-left-color: #f0ad4e;
-
 }
 .iframesize{
 	width: 100%;
@@ -39,18 +36,15 @@
 .Titulo {
 	margin-top: -55px;
 }
-
 .abajo {
-		position: fixed;
-		bottom: 0px;
-		width: 100%;
-		z-index: 9999;
-
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	z-index: 9999;
 }
 .ajustediv {
 	margin-bottom: 50px;
 }
-
 .metodo {
 	width: 70px;
 }
