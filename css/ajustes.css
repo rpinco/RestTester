@@ -24,6 +24,7 @@
 }
 .ajustetexto{
 	margin-top: 7px;
+	min-width: 140px;
 }
 .separador {
 	margin-top: 15px;
