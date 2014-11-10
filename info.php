@@ -269,7 +269,7 @@
                 <div class="row">
   
                         <div class="jumbotron text-center" >
-                            <h1>Hello Beautiful!</h1>
+                            <h1>En construcción!</h1>
                             <p>This is a sidebar navigation responsive template built off of Bootstrap 3.0 and simple sidebar template. It includes anchors, scroll spy, smooth scroll, and Awesome icon fonts.</p>
                             <p><a class="btn btn-default">Click On Me!</a>
                             <a class="btn btn-info">Tweet Me!</a></p>

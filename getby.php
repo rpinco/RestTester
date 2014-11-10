@@ -103,9 +103,9 @@
                		
                   
               <div class="input-group input-group-sm baseurl">
-              <input type="text" class="form-control" id="URL" placeholder="url base" name="URL" value="http://172.16.11.152/customerRest/web/customer/getby/" />
+              <input type="text" class="form-control" id="URL" placeholder="url base" name="URL" value="http://172.16.11.152/customerRest/web/customer/getBy/" />
               <div class="input-group-btn">
-              <input class="btn btn-primary metodo" method="POST" value="POST" name="post" name="tipoTransaccion" id="tipoTransaccion" disabled>
+              <input class="btn btn-primary metodo" value="POST" name="tipoTransaccion" id="tipoTransaccion" disabled>
 							</div>
 					    </div>
 
@@ -130,26 +130,6 @@
           <input type="text" class="form-control" type="text" id="authkey" placeholder="authkey" name="authkey" value="somerandomauthkey">
           </div></div>
 
-          <div class="form-group">
-          <label class="col-lg-4 control-label ajustetexto">CustomerCRMId</label>
-          <div class="input-group">
-          <span class="input-group-addon requerido"><i class="glyphicon glyphicon-exclamation-sign "></i></span>
-          <input class="form-control" type="text" id="customerCRMId" placeholder="customerCRMId" name="customerCRMId">
-          </div></div>
-
-          <div class="form-group">
-          <label class="col-lg-4 control-label ajustetexto">name</label>
-          <div class="input-group">
-          <span class="input-group-addon requerido"><i class="glyphicon glyphicon-exclamation-sign "></i></span>
-          <input class="form-control" type="text" id="name" placeholder="name" name="name" value="prueba00000">
-          </div></div>
-
-          <div class="form-group">
-          <label class="col-lg-4 control-label ajustetexto">Password</label>
-          <div class="input-group">
-          <span class="input-group-addon requerido"><i class="glyphicon glyphicon-exclamation-sign "></i></span>
-          <input class="form-control" type="text" id="password" placeholder="password" name="password" value="admin1234">
-          </div></div>
 
           <div class="form-group">
           <label class="col-lg-4 control-label ajustetexto">CompanyId</label>
@@ -158,10 +138,28 @@
           <input class="form-control" type="text" id="companyId" placeholder="companyId" name="companyId" value="572190">
           </div></div>
 
+
+          <div class="form-group">
+          <label class="col-lg-4 control-label ajustetexto">CustomerCRMId</label>
+          <div class="input-group">
+          <span class="input-group-addon norequerido"><i class="glyphicon glyphicon-leaf"></i></span>
+          <input class="form-control" type="text" id="customerCRMId" placeholder="customerCRMId" name="customerCRMId">
+          </div></div>
+
+          <div class="form-group">
+          <label class="col-lg-4 control-label ajustetexto">name</label>
+          <div class="input-group">
+          <span class="input-group-addon norequerido"><i class="glyphicon glyphicon-leaf"></i></span>
+          <input class="form-control" type="text" id="name" placeholder="name" name="name" value="prueba00000">
+          </div></div>
+
+
+
+
           <div class="form-group">
           <label class="col-lg-4 control-label ajustetexto">ClientType</label>
           <div class="input-group">
-          <span class="input-group-addon requerido"><i class="glyphicon glyphicon-exclamation-sign "></i></span>
+          <span class="input-group-addon norequerido"><i class="glyphicon glyphicon-leaf"></i></span>
           <input class="form-control" type="text" id="clientType" placeholder="clientType" name="clientType" value="1">
           </div></div>
 

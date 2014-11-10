@@ -104,7 +104,7 @@
               <div class="input-group input-group-sm baseurl">
               <input type="text" class="form-control" id="URL" placeholder="url base" name="URL" value="http://172.16.11.152/customerRest/web/customer/enable/" />
               <div class="input-group-btn">
-              <input class="btn btn-primary metodo" method="put" value="PUT" name="put" name="tipoTransaccion" id="tipoTransaccion" disabled>
+              <input class="btn btn-primary metodo" value="PUT" name="tipoTransaccion" id="tipoTransaccion" disabled>
 							</div>
 					    </div>
 

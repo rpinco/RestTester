@@ -105,7 +105,7 @@
               <div class="input-group input-group-sm baseurl">
               <input type="text" class="form-control" id="URL" placeholder="url base" name="URL" value="http://172.16.11.152/customerRest/web/customer/modify/" />
               <div class="input-group-btn">
-              <input class="btn btn-primary metodo" method="PUT" value="POST" name="post" name="tipoTransaccion" id="tipoTransaccion" disabled>
+              <input class="btn btn-primary metodo" value="PUT" name="tipoTransaccion" id="tipoTransaccion" disabled>
 
 							</div>
 					    </div>
@@ -148,12 +148,6 @@
           </div>
 
 
-          <div class="form-group">
-          <label class="col-lg-4 control-label ajustetexto">name</label>
-          <div class="input-group">
-          <span class="input-group-addon norequerido"><i class="glyphicon glyphicon-exclamation-sign "></i></span>
-          <input class="form-control" type="text" id="name" placeholder="name" name="name" value="prueba00000">
-          </div></div>
 
           <div class="form-group">
           <label class="col-lg-4 control-label ajustetexto">Password</label>
@@ -192,6 +186,14 @@
           </div></div>
 
 
+          <div class="form-group">
+          <label class="col-lg-4 control-label ajustetexto">SalieId</label>
+          <div class="input-group">
+          <span class="input-group-addon norequerido"><i class="glyphicon glyphicon-leaf"></i></span>
+          <input class="form-control" id="saleId" placeholder="saleId" name="saleId">
+          </div>
+          </div>    
+
 
 
 	</div>
@@ -200,13 +202,7 @@
     <div class="col-md-3 column"> 
 
 
-          <div class="form-group">
-          <label class="col-lg-4 control-label ajustetexto">SalieId</label>
-          <div class="input-group">
-          <span class="input-group-addon norequerido"><i class="glyphicon glyphicon-leaf"></i></span>
-          <input class="form-control" id="saleId" placeholder="saleId" name="saleId">
-          </div>
-          </div>    
+
 
 
           <div class="form-group">
