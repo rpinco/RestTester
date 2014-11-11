@@ -57,9 +57,9 @@
     <ul class="nav navbar-nav">
 
      <li class=""><a href="index.php" ><span class="glyphicon glyphicon-plus"></span> Add</a></li>
-     <li class="active"><a href="delete.php"><span class="glyphicon glyphicon-remove"></span> Delete</a></li>
+     <li class=""><a href="delete.php"><span class="glyphicon glyphicon-remove"></span> Delete</a></li>
      <li class=""><a href="modify.php"><span class="glyphicon glyphicon-pencil"></span> Modify</a></li>
-     <li class=""><a href="get.php"><span class="glyphicon glyphicon-share-alt"></span> get</a></li>
+     <li class="active"><a href="get.php"><span class="glyphicon glyphicon-share-alt"></span> get</a></li>
      <li class=""><a href="getby.php"><span class="glyphicon glyphicon-share"></span> getBy</a></li>
      <li class=""><a href="disable.php"><span class="glyphicon glyphicon-eye-close"></span> Disable</a></li>
      <li class=""><a href="enable.php"><span class="glyphicon glyphicon-eye-open"></span> Enable</a></li>

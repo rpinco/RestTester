@@ -1,17 +1,25 @@
 .imputadjust {
+	padding-left:0px;
+	margin-top:20px;
+	max-width: 95%;
+}
 
-	margin-top:50px;
+.imputadjust {
+	padding-left:0px;
+	margin-top:20px;
 
 }
 
-.imputadjust2 {
-	max-width: 45%;
-	margin-top:50px;
-	margin-left: 15px;
-
+.contenedor {
+	width:100%;
+	padding: 20px 20px 20px 20px;
+	margin:auto;
 }
 
-
+.baseurl {
+    margin-top: 30px;
+	max-width: 66%;
+}
 .labelsize {
 	width:70px;
 }
@@ -38,27 +46,3 @@
 	width: 100%;
 	height: 800px;
 }
-.ajustetexto{
-	margin-top: 7px;
-}
-.separador {
-	margin-top: 15px;
-}
-.requerido {
-	color: #b94a48;
-}
-.norequerido {
-	color: #3c763d;
-}
-
-.Titulo {
-	margin-top: -55px;
-}
-
-.abajo {
-		position: fixed;
-		bottom: 0px;
-		width: 100%;
-
-}
-
