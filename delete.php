@@ -102,7 +102,7 @@
 
                		
               <div class="input-group input-group-sm baseurl">
-              <input type="text" class="form-control" id="URL" placeholder="url base" name="URL" value="http://172.16.11.152/customerRest/web/customer/delete/" />
+              <input type="text" class="form-control" id="URL" placeholder="url base" name="URL" value="http://172.16.60.27/platformModules/CustomerService/web/customer/delete/" />
               <div class="input-group-btn">
               <input class="btn btn-primary metodo" value="delete" name="tipoTransaccion" id="tipoTransaccion" disabled>
 
@@ -136,7 +136,7 @@
           <label class="col-lg-4 control-label ajustetexto">CompanyId</label>
           <div class="input-group">
           <span class="input-group-addon requerido"><i class="glyphicon glyphicon-exclamation-sign "></i></span>
-          <input class="form-control" type="text" id="companyId" placeholder="companyId" name="companyId" value="572190">
+          <input class="form-control" type="text" id="companyId" placeholder="companyId" name="companyId" value="1">
           </div></div>
 
           <div class="form-group">

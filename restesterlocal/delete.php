@@ -57,9 +57,9 @@
     <ul class="nav navbar-nav">
 
      <li class=""><a href="index.php" ><span class="glyphicon glyphicon-plus"></span> Add</a></li>
-     <li class=""><a href="delete.php"><span class="glyphicon glyphicon-remove"></span> Delete</a></li>
+     <li class="active"><a href="delete.php"><span class="glyphicon glyphicon-remove"></span> Delete</a></li>
      <li class=""><a href="modify.php"><span class="glyphicon glyphicon-pencil"></span> Modify</a></li>
-     <li class="active"><a href="get.php"><span class="glyphicon glyphicon-share-alt"></span> get</a></li>
+     <li class=""><a href="get.php"><span class="glyphicon glyphicon-share-alt"></span> get</a></li>
      <li class=""><a href="getby.php"><span class="glyphicon glyphicon-share"></span> getBy</a></li>
      <li class=""><a href="disable.php"><span class="glyphicon glyphicon-eye-close"></span> Disable</a></li>
      <li class=""><a href="enable.php"><span class="glyphicon glyphicon-eye-open"></span> Enable</a></li>
@@ -82,7 +82,7 @@
 
     		
                       <div class="page-header">
-                <h2 class="Titulo">Get Customer</h2>
+                <h2 class="Titulo">Delete Customer</h2>
 
 
 
@@ -90,8 +90,8 @@
 
             		</div>
 
-            			<p>Campos Requeridos <i class="glyphicon glyphicon-exclamation-sign requerido"></i></p>
-                  <p>Campos Optativos <i class="glyphicon glyphicon-leaf norequerido"></i>
+            			<p>Required Fields <i class="glyphicon glyphicon-exclamation-sign requerido"></i></p>
+                  <p>Optative Fields <i class="glyphicon glyphicon-leaf norequerido"></i>
 
 
            					 <div class="from-horizontal">
@@ -102,11 +102,13 @@
 
                		
               <div class="input-group input-group-sm baseurl">
-              <input type="text" class="form-control" id="URL" placeholder="url base" name="URL" value="http://172.16.60.27/platformModules/CustomerService/web/customer/get/" />
+              <input type="text" class="form-control" id="URL" placeholder="url base" name="URL" value="http://172.16.11.152/customerRest/web/customer/delete/" />
               <div class="input-group-btn">
-              <input class="btn btn-primary metodo" value="GET" name="tipoTransaccion" id="tipoTransaccion" disabled>
-							</div>
-					    </div>
+              <input class="btn btn-primary metodo" value="delete" name="tipoTransaccion" id="tipoTransaccion" disabled>
+
+
+              </div>
+              </div>
 
 
 
@@ -134,7 +136,7 @@
           <label class="col-lg-4 control-label ajustetexto">CompanyId</label>
           <div class="input-group">
           <span class="input-group-addon requerido"><i class="glyphicon glyphicon-exclamation-sign "></i></span>
-          <input class="form-control" type="text" id="companyId" placeholder="companyId" name="companyId" value="1">
+          <input class="form-control" type="text" id="companyId" placeholder="companyId" name="companyId" value="572190">
           </div></div>
 
           <div class="form-group">
@@ -178,7 +180,7 @@
 
 
  			<div class="abajo">
-      <input type="btnSubmit" class="btn btn-info btn-lg btn-block" id="Enviar" value="Enviar" onclick="if(validate()){mostrarResultadoGET()}"/>
+      <input type="btnSubmit" class="btn btn-info btn-lg btn-block" id="Enviar" value="Enviar" onclick="if(validate()){mostrarResultado()}"/>
       
  				
 

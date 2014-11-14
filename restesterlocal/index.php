@@ -56,11 +56,11 @@
   <div class="collapse navbar-collapse navbar-bootsnipp-collapse">
     <ul class="nav navbar-nav">
 
-     <li class=""><a href="index.php" ><span class="glyphicon glyphicon-plus"></span> Add</a></li>
+     <li class="active"><a href="index.php" ><span class="glyphicon glyphicon-plus"></span> Add</a></li>
      <li class=""><a href="delete.php"><span class="glyphicon glyphicon-remove"></span> Delete</a></li>
      <li class=""><a href="modify.php"><span class="glyphicon glyphicon-pencil"></span> Modify</a></li>
      <li class=""><a href="get.php"><span class="glyphicon glyphicon-share-alt"></span> get</a></li>
-     <li class="active"><a href="getby.php"><span class="glyphicon glyphicon-share"></span> getBy</a></li>
+     <li class=""><a href="getby.php"><span class="glyphicon glyphicon-share"></span> getBy</a></li>
      <li class=""><a href="disable.php"><span class="glyphicon glyphicon-eye-close"></span> Disable</a></li>
      <li class=""><a href="enable.php"><span class="glyphicon glyphicon-eye-open"></span> Enable</a></li>
      <li class=""><a href="info.php"><span class="glyphicon glyphicon-info-sign"></span> Info</a></li>
@@ -75,14 +75,14 @@
 
   </nav>
 
-<div class="container-fluid">
+<div class="container-fluid ajustediv">
 
 
     <div class="col-md-3 column">
 
     		
                       <div class="page-header">
-                <h2 class="Titulo">Get Customer By</h2>
+                <h2 class="Titulo">Add Customer</h2>
 
 
 
@@ -90,8 +90,8 @@
 
             		</div>
 
-            			<p>Campos Requeridos <i class="glyphicon glyphicon-exclamation-sign requerido"></i></p>
-                  <p>Campos Optativos <i class="glyphicon glyphicon-leaf norequerido"></i>
+            			<p>Requiered Field <i class="glyphicon glyphicon-exclamation-sign requerido"></i></p>
+                  <p>Optative Field <i class="glyphicon glyphicon-leaf norequerido"></i>
 
 
            					 <div class="from-horizontal">
@@ -101,11 +101,12 @@
             <form id="elform" method="POST" action="get_test.php" enctype="multipart/form-data" class="form-horizontal"> 
 
                		
-                  
               <div class="input-group input-group-sm baseurl">
-              <input type="text" class="form-control" id="URL" placeholder="url base" name="URL" value="http://172.16.60.27/platformModules/CustomerService/web/customer/getBy/" />
-              <div class="input-group-btn">
+							<input type="text" class="form-control" id="URL" placeholder="url base" name="URL" value="http://172.16.11.152/customerRest/web/customer/add/" />
+							<div class="input-group-btn">
               <input class="btn btn-primary metodo" value="POST" name="tipoTransaccion" id="tipoTransaccion" disabled>
+
+
 							</div>
 					    </div>
 
@@ -117,7 +118,7 @@
 
                 <fieldset>
 
-                    <legend><br>Valores</legend>
+                    <legend><br>Values</legend>
                     
 
 
@@ -130,38 +131,49 @@
           <input type="text" class="form-control" type="text" id="authkey" placeholder="authkey" name="authkey" value="somerandomauthkey">
           </div></div>
 
-
-          <div class="form-group">
-          <label class="col-lg-4 control-label ajustetexto">CompanyId</label>
-          <div class="input-group">
-          <span class="input-group-addon requerido"><i class="glyphicon glyphicon-exclamation-sign "></i></span>
-          <input class="form-control" type="text" id="companyId" placeholder="companyId" name="companyId" value="1">
-          </div></div>
-
-
           <div class="form-group">
           <label class="col-lg-4 control-label ajustetexto">CustomerCRMId</label>
           <div class="input-group">
-          <span class="input-group-addon norequerido"><i class="glyphicon glyphicon-leaf"></i></span>
+          <span class="input-group-addon requerido"><i class="glyphicon glyphicon-exclamation-sign "></i></span>
           <input class="form-control" type="text" id="customerCRMId" placeholder="customerCRMId" name="customerCRMId">
           </div></div>
 
           <div class="form-group">
           <label class="col-lg-4 control-label ajustetexto">name</label>
           <div class="input-group">
-          <span class="input-group-addon norequerido"><i class="glyphicon glyphicon-leaf"></i></span>
-          <input class="form-control" type="text" id="name" placeholder="name" name="name" value="">
+          <span class="input-group-addon requerido"><i class="glyphicon glyphicon-exclamation-sign "></i></span>
+          <input class="form-control" type="text" id="name" placeholder="name" name="name" value="prueba00000">
           </div></div>
 
+          <div class="form-group">
+          <label class="col-lg-4 control-label ajustetexto">Password</label>
+          <div class="input-group">
+          <span class="input-group-addon requerido"><i class="glyphicon glyphicon-exclamation-sign "></i></span>
+          <input class="form-control" type="text" id="password" placeholder="password" name="password" value="admin1234">
+          </div></div>
 
-
+          <div class="form-group">
+          <label class="col-lg-4 control-label ajustetexto">CompanyId</label>
+          <div class="input-group">
+          <span class="input-group-addon requerido"><i class="glyphicon glyphicon-exclamation-sign "></i></span>
+          <input class="form-control" type="text" id="companyId" placeholder="companyId" name="companyId" value="572190">
+          </div></div>
 
           <div class="form-group">
           <label class="col-lg-4 control-label ajustetexto">ClientType</label>
           <div class="input-group">
-          <span class="input-group-addon norequerido"><i class="glyphicon glyphicon-leaf"></i></span>
-          <input class="form-control" type="text" id="clientType" placeholder="clientType" name="clientType" value="">
+          <span class="input-group-addon requerido"><i class="glyphicon glyphicon-exclamation-sign "></i></span>
+          <input class="form-control" type="text" id="clientType" placeholder="clientType" name="clientType" value="1">
           </div></div>
+
+
+          <div class="form-group">
+          <label class="col-lg-4 control-label ajustetexto">customerId</label>
+          <div class="input-group">
+          <span class="input-group-addon norequerido"><i class="glyphicon glyphicon-leaf"></i></span>
+          <input class="form-control" type="text" id="customerId" placeholder="customerId" name="customerId">
+          </div>
+          </div>
 
           <div class="form-group">
           <label class="col-lg-4 control-label ajustetexto">Username</label>
@@ -178,17 +190,19 @@
           </div></div>
 
 
+
+
+	</div>
+
+
+    <div class="col-md-3 column"> 
+
           <div class="form-group">
           <label class="col-lg-4 control-label ajustetexto">Email</label>
           <div class="input-group">
           <span class="input-group-addon norequerido"><i class="glyphicon glyphicon-leaf"></i></span>
           <input class="form-control" type="text" id="email" placeholder="email" name="email">
           </div></div>
-
-	</div>
-
-
-    <div class="col-md-3 column"> 
 
           <div class="form-group">
           <label class="col-lg-4 control-label ajustetexto">SalieId</label>
@@ -262,21 +276,7 @@
           </div>
           </div>
 
-          <div class="form-group">
-          <label class="col-lg-4 control-label ajustetexto">customerId</label>
-          <div class="input-group">
-          <span class="input-group-addon norequerido"><i class="glyphicon glyphicon-leaf"></i></span>
-          <input class="form-control" type="text" id="customerId" placeholder="customerId" name="customerId">
-          </div>
-          </div>
 
-          <div class="form-group">
-          <label class="col-lg-4 control-label ajustetexto">Password</label>
-          <div class="input-group">
-          <span class="input-group-addon norequerido"><i class="glyphicon glyphicon-leaf"></i></span>
-          <input class="form-control" type="text" id="password" placeholder="password" name="password">
-          </div>
-          </div>
 
 
 
@@ -289,7 +289,7 @@
 
     <div class="col-md-6 column respuesta"> 
 
-    	 <h3> RESPUESTA </h3>
+    	 <h3> RESPONSE </h3>
         		<div id="resultado" class="bs-callout bs-callout-warning">
         			1. Colocar la url base<br>
         			2. Elegir el metodo<br>
@@ -305,7 +305,7 @@
 
 
  			<div class="abajo">
-      <input type="btnSubmit" class="btn btn-info btn-lg btn-block" id="Enviar" value="Enviar" onclick="if(validate()){mostrarResultado()}"/>
+      <input type="btnSubmit" class="btn btn-info btn-lg btn-block" id="Enviar" value="Enviar" onclick="{mostrarResultado()}"/>
       
  				
 
