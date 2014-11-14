@@ -180,22 +180,30 @@
   padding: 15px;
 }
 
-input {
-    background-color: #fff;
-    background-image: none;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
-    color: #555;
-    display: block;
-    font-size: 14px;
-    height: 34px;
-    line-height: 1.42857;
-    padding: 6px 12px;
-
-    width: 100%;
 }
 
+.filterable {
+    margin-top: 15px;
+}
+.filterable .panel-heading .pull-right {
+    margin-top: -20px;
+}
+.filterable .filters input[disabled] {
+    background-color: transparent;
+    border: none;
+    cursor: auto;
+    box-shadow: none;
+    padding: 0;
+    height: auto;
+}
+.filterable .filters input[disabled]::-webkit-input-placeholder {
+    color: #333;
+}
+.filterable .filters input[disabled]::-moz-placeholder {
+    color: #333;
+}
+.filterable .filters input[disabled]:-ms-input-placeholder {
+    color: #333;
 }
 
 
@@ -293,240 +301,49 @@ input {
                         </div>
     
                 </div>
-                <p>Add a drop-down filter, define its first option, sort it and remove a filter</p>
-<table class="table" id="table2">
-        <thead>
-            <tr>
-                <th>th is 0</th>
-
-                <th>th is 1</th>
-
-                <th>th is 2</th>
-
-                <th>th is 3</th>
-
-                <th>th is 4</th>
-            </tr>
-        </thead>
-
-        <tbody>
-            <tr>
-                <td>cell is row 0, column 0</td>
-
-                <td>cell is row 0, column 1</td>
-
-                <td>cell is row 0, column 2</td>
-
-                <td>cell is row 0, column 3</td>
-
-                <td>cell is row 0, column 4</td>
-            </tr>
-
-            <tr>
-                <td>cell is row 1, column 0</td>
-
-                <td>cell is row 1, column 1</td>
-
-                <td>cell is row 1, column 2</td>
-
-                <td>cell is row 1, column 3</td>
-
-                <td>cell is row 1, column 4</td>
-            </tr>
-
-            <tr>
-                <td>cell is row 2, column 0</td>
-
-                <td>cell is row 2, column 1</td>
-
-                <td>cell is row 2, column 2</td>
-
-                <td>cell is row 2, column 3</td>
-
-                <td>cell is row 2, column 4</td>
-            </tr>
-
-            <tr>
-                <td>cell is row 3, column 0</td>
-
-                <td>cell is row 3, column 1</td>
-
-                <td>cell is row 3, column 2</td>
-
-                <td>cell is row 3, column 3</td>
-
-                <td>cell is row 3, column 4</td>
-            </tr>
-
-            <tr>
-                <td>cell is row 4, column 0</td>
-
-                <td>cell is row 4, column 1</td>
-
-                <td>cell is row 4, column 2</td>
-
-                <td>cell is row 4, column 3</td>
-
-                <td>cell is row 4, column 4</td>
-            </tr>
-
-            <tr>
-                <td>cell is row 5, column 0</td>
-
-                <td>cell is row 5, column 1</td>
-
-                <td>cell is row 5, column 2</td>
-
-                <td>cell is row 5, column 3</td>
-
-                <td>cell is row 5, column 4</td>
-            </tr>
-
-            <tr>
-                <td>cell is row 6, column 0</td>
-
-                <td>cell is row 6, column 1</td>
-
-                <td>cell is row 6, column 2</td>
-
-                <td>cell is row 6, column 3</td>
-
-                <td>cell is row 6, column 4</td>
-            </tr>
-
-            <tr>
-                <td>cell is row 7, column 0</td>
-
-                <td>cell is row 7, column 1</td>
-
-                <td>cell is row 7, column 2</td>
-
-                <td>cell is row 7, column 3</td>
-
-                <td>cell is row 7, column 4</td>
-            </tr>
-
-            <tr>
-                <td>cell is row 8, column 0</td>
-
-                <td>cell is row 8, column 1</td>
-
-                <td>cell is row 8, column 2</td>
-
-                <td>cell is row 8, column 3</td>
-
-                <td>cell is row 8, column 4</td>
-            </tr>
-
-            <tr>
-                <td>cell is row 9, column 0</td>
-
-                <td>cell is row 9, column 1</td>
-
-                <td>cell is row 9, column 2</td>
-
-                <td>cell is row 9, column 3</td>
-
-                <td>cell is row 9, column 4</td>
-            </tr>
-
-            <tr>
-                <td>cell is row 10, column 0</td>
-
-                <td>cell is row 10, column 1</td>
-
-                <td>cell is row 10, column 2</td>
-
-                <td>cell is row 10, column 3</td>
-
-                <td>cell is row 10, column 4</td>
-            </tr>
-
-            <tr>
-                <td>cell is row 11, column 0</td>
-
-                <td>cell is row 11, column 1</td>
-
-                <td>cell is row 11, column 2</td>
-
-                <td>cell is row 11, column 3</td>
-
-                <td>cell is row 11, column 4</td>
-            </tr>
-
-            <tr>
-                <td>cell is row 12, column 0</td>
-
-                <td>cell is row 12, column 1</td>
-
-                <td>cell is row 12, column 2</td>
-
-                <td>cell is row 12, column 3</td>
-
-                <td>cell is row 12, column 4</td>
-            </tr>
-
-            <tr>
-                <td>cell is row 13, column 0</td>
-
-                <td>cell is row 13, column 1</td>
-
-                <td>cell is row 13, column 2</td>
-
-                <td>cell is row 13, column 3</td>
-
-                <td>cell is row 13, column 4</td>
-            </tr>
-
-            <tr>
-                <td>cell is row 14, column 0</td>
-
-                <td>cell is row 14, column 1</td>
-
-                <td>cell is row 14, column 2</td>
-
-                <td>cell is row 14, column 3</td>
-
-                <td>cell is row 14, column 4</td>
-            </tr>
-
-            <tr>
-                <td>cell is row 15, column 0</td>
-
-                <td>cell is row 15, column 1</td>
-
-                <td>cell is row 15, column 2</td>
-
-                <td>cell is row 15, column 3</td>
-
-                <td>cell is row 15, column 4</td>
-            </tr>
-
-            <tr>
-                <td>cell is row 16, column 0</td>
-
-                <td>cell is row 16, column 1</td>
-
-                <td>cell is row 16, column 2</td>
-
-                <td>cell is row 16, column 3</td>
-
-                <td>cell is row 16, column 4</td>
-            </tr>
-
-            <tr>
-                <td>cell is row 17, column 0</td>
-
-                <td>cell is row 17, column 1</td>
-
-                <td>cell is row 17, column 2</td>
-
-                <td>cell is row 17, column 3</td>
-
-                <td>cell is row 17, column 4</td>
-            </tr>
-        </tbody>
-    </table>
+               
+
+ 
+
+<div class="row">
+        <div class="panel panel-primary filterable">
+            <div class="panel-heading">
+                <h3 class="panel-title">errorCode list</h3>
+                <div class="pull-right">
+                    <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> Filter</button>
+                </div>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr class="filters">
+                        <th><input type="text" class="form-control" placeholder="#" disabled></th>
+                        <th><input type="text" class="form-control" placeholder="First Name" disabled></th>
+                        <th><input type="text" class="form-control" placeholder="Last Name" disabled></th>
+                        <th><input type="text" class="form-control" placeholder="Username" disabled></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
                 <div class="navbar navbar-default navbar-static-bottom">
                     <p class="navbar-text pull-left">
@@ -566,13 +383,48 @@ input {
 
 
 
-    var table2_Props = {
-    col_0: "select",
-    col_4: "none",
-    display_all_text: " [ Show all ] ",
-    sort_select: true
-};
-var tf2 = setFilterGrid("table2", table2_Props);
+$(document).ready(function(){
+    $('.filterable .btn-filter').click(function(){
+        var $panel = $(this).parents('.filterable'),
+        $filters = $panel.find('.filters input'),
+        $tbody = $panel.find('.table tbody');
+        if ($filters.prop('disabled') == true) {
+            $filters.prop('disabled', false);
+            $filters.first().focus();
+        } else {
+            $filters.val('').prop('disabled', true);
+            $tbody.find('.no-result').remove();
+            $tbody.find('tr').show();
+        }
+    });
+
+    $('.filterable .filters input').keyup(function(e){
+        /* Ignore tab key */
+        var code = e.keyCode || e.which;
+        if (code == '9') return;
+        /* Useful DOM data and selectors */
+        var $input = $(this),
+        inputContent = $input.val().toLowerCase(),
+        $panel = $input.parents('.filterable'),
+        column = $panel.find('.filters th').index($input.parents('th')),
+        $table = $panel.find('.table'),
+        $rows = $table.find('tbody tr');
+        /* Dirtiest filter function ever ;) */
+        var $filteredRows = $rows.filter(function(){
+            var value = $(this).find('td').eq(column).text().toLowerCase();
+            return value.indexOf(inputContent) === -1;
+        });
+        /* Clean previous no-result if exist */
+        $table.find('tbody .no-result').remove();
+        /* Show all rows, hide filtered ones (never do that outside of a demo ! xD) */
+        $rows.show();
+        $filteredRows.hide();
+        /* Prepend no-result row if all rows are filtered */
+        if ($filteredRows.length === $rows.length) {
+            $table.find('tbody').prepend($('<tr class="no-result text-center"><td colspan="'+ $table.find('.filters th').length +'">No result found</td></tr>'));
+        }
+    });
+});
 
     </script>			
 

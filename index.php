@@ -205,7 +205,7 @@
           </div></div>
 
           <div class="form-group">
-          <label class="col-lg-4 control-label ajustetexto">SalieId</label>
+          <label class="col-lg-4 control-label ajustetexto">SaleId</label>
           <div class="input-group">
           <span class="input-group-addon norequerido"><i class="glyphicon glyphicon-leaf"></i></span>
           <input class="form-control" id="saleId" placeholder="saleId" name="saleId">
